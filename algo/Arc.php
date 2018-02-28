@@ -10,5 +10,6 @@ namespace algo;
 
 class Arc
 {
-
+    public $capacite;
+    public $cout;
 }

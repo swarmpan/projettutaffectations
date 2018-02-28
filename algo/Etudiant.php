@@ -10,5 +10,8 @@ namespace algo;
 
 class Etudiant extends Sommet
 {
-
+    public $login;
+    public $nom;
+    public $prenom;
+    public $email;
 }

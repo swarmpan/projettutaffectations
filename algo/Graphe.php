@@ -10,5 +10,6 @@ namespace algo;
 
 class Graphe
 {
-
+    public $sommets;
+    public $arcs;
 }

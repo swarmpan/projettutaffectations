@@ -10,5 +10,5 @@ namespace algo;
 
 class Projet extends Sommet
 {
-
+    public $titre;
 }
