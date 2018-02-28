@@ -8,11 +8,11 @@
 
 namespace algo;
 
-class Algo
+class AlgoAPS
 {
 
     /**
-     * Algo constructor.
+     * AlgoAPS constructor.
      */
     public function __construct()
     {
