@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 require_once ('Graphe.php');
 require_once ('Sommet.php');
+require_once ('Arc.php');
 
 use PHPUnit\Framework\TestCase;
 
@@ -24,11 +25,10 @@ class GrapheTest extends TestCase
         return $graphe;
     }
 
-    /**
-     * @depends testConstruct
-     */
-    public function testAjoutSommet(Graphe $graphe)
+    public function testAjoutSommet()
     {
+        $graphe = new Graphe();
+
         $s1 = new Sommet();
         $s2 = new Sommet();
 
@@ -37,21 +37,50 @@ class GrapheTest extends TestCase
 
         $sommets = $graphe->getSommets();
 
-        $this->assertEquals(count($sommets), 2);
+        $this->assertCount(2, $sommets);
         $this->assertContains($s1, $sommets);
         $this->assertContains($s2, $sommets);
-        $this->assertEquals($sommets[1], $s2);
+        $this->assertSame($sommets[1], $s2);
 
         return $graphe;
     }
 
-    /**
-     * @depends testAjoutSommet
-     */
-    public function testAjoutArc(Graphe $graphe)
+    public function testAjoutArc()
     {
-        
+        $graphe = new Graphe();
+
+        $s1 = new Sommet();
+        $s2 = new Sommet();
+        $s3 = new Sommet();
+
+        $graphe->ajouterSommet($s1);
+        $graphe->ajouterSommet($s2);
+        $graphe->ajouterSommet($s3);
+        $this->assertNotSame($s1, $s2);
+
+        $a1 = new Arc($s1, $s2, 1);
+        $a2 = new Arc($s2, $s3, 2);
+        $a3 = new Arc($s1, $s3, 5);
+        $this->assertSame($a2->sommetFrom, $s2);
+        $this->assertNotSame($a2->sommetFrom, $s1);
+
+        $graphe->ajouterArc($a1);
+        $graphe->ajouterArc($a2);
+        $graphe->ajouterArc($a3);
+
+        $this->assertCount(3, $graphe->getArcs());
+        $this->assertSame($graphe->getArcs()[2], $a3);
+        $this->assertSame($graphe->getArcs()[0]->sommetFrom, $s1);
+        $this->assertNotSame($graphe->getArcs()[1]->sommetFrom, $s1);
+        return $graphe;
     }
 
-
+    /**
+     * @depends testAjoutArc
+     */
+    public function testRechercheArc(Graphe $graphe)
+    {
+        $arcs = $graphe->getArcsFrom($graphe->getSommets()[0]);
+        $this->assertEquals(count($arcs), 2);
+    }
 }

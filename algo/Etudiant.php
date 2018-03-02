@@ -6,6 +6,8 @@
  * Time: 10:36
  */
 
+require_once ('Sommet.php');
+
 class Etudiant extends Sommet
 {
     public $login;

@@ -6,6 +6,8 @@
  * Time: 10:36
  */
 
+require_once ('Sommet.php');
+
 class Projet extends Sommet
 {
     public $titre;

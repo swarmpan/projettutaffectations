@@ -6,6 +6,8 @@
  * Time: 10:19
  */
 
+require_once ('Etudiant.php');
+
 class AlgoAPS
 {
 
@@ -17,6 +19,10 @@ class AlgoAPS
     }
 
     public function run() {
+
+    }
+
+    public function estAffecte(Etudiant $e) {
 
     }
 }

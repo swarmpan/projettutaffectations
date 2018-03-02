@@ -61,7 +61,7 @@ class Graphe
     public function getArcsFrom($sommet) {
         $arcsSortants = array();
         foreach ($this->arcs as $arc) {
-            if ($arc->sommetFrom == $sommet)
+            if ($arc->sommetFrom === $sommet)
                 $arcsSortants[] = $arc;
         }
         return $arcsSortants;
