@@ -6,8 +6,6 @@
  * Time: 10:36
  */
 
-namespace algo;
-
 class Etudiant extends Sommet
 {
     public $login;

@@ -6,8 +6,6 @@
  * Time: 10:34
  */
 
-namespace algo;
-
 require_once ('Arc.php');
 require_once ('Sommet.php');
 

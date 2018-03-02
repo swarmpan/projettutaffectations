@@ -6,8 +6,6 @@
  * Time: 10:35
  */
 
-namespace algo;
-
 class Sommet
 {
 

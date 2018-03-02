@@ -6,8 +6,6 @@
  * Time: 10:19
  */
 
-namespace algo;
-
 class AlgoAPS
 {
 

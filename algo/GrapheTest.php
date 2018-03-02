@@ -2,31 +2,56 @@
 /**
  * Created by PhpStorm.
  * User: Hugo
- * Date: 28/02/2018
- * Time: 15:51
+ * Date: 02/03/2018
+ * Time: 09:18
  */
 
-namespace algo;
+declare(strict_types=1);
 
+require_once ('Graphe.php');
+require_once ('Sommet.php');
 
-class GrapheTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class GrapheTest extends TestCase
 {
 
-    public function testGetArcs()
-    {
-    }
-
-    public function testGraphe()
+    public function testConstruct()
     {
         $graphe = new Graphe();
+        $this->assertInstanceOf("Graphe", $graphe);
+        $this->assertEmpty($graphe->getSommets());
+        return $graphe;
+    }
+
+    /**
+     * @depends testConstruct
+     */
+    public function testAjoutSommet(Graphe $graphe)
+    {
         $s1 = new Sommet();
         $s2 = new Sommet();
-        $s3 = new Sommet();
 
         $graphe->ajouterSommet($s1);
         $graphe->ajouterSommet($s2);
-        $graphe->ajouterSommet($s3);
 
+        $sommets = $graphe->getSommets();
 
+        $this->assertEquals(count($sommets), 2);
+        $this->assertContains($s1, $sommets);
+        $this->assertContains($s2, $sommets);
+        $this->assertEquals($sommets[1], $s2);
+
+        return $graphe;
     }
+
+    /**
+     * @depends testAjoutSommet
+     */
+    public function testAjoutArc(Graphe $graphe)
+    {
+        
+    }
+
+
 }
