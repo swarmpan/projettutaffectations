@@ -7,6 +7,7 @@
  */
 
 require_once ('Etudiant.php');
+require_once ('GrapheAffectation.php');
 
 class AlgoAPS
 {
@@ -22,7 +23,16 @@ class AlgoAPS
 
     }
 
-    public function estAffecte(Etudiant $e) {
+    public function tousEtudiantsAffectes(GrapheAffectation $g) {
+        foreach ($g->etudiants as $etudiant) {
+            if (! $this->estAffecte($g, $etudiant))
+                return false;
+        }
+        return true;
+    }
 
+    public function estAffecte(Graphe $graphe, Etudiant $e) {
+        $arcsFrom = $graphe->getArcsFrom($e);
+        return count($arcsFrom) > 0;
     }
 }

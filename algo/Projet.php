@@ -8,6 +8,7 @@
 
 require_once ('Sommet.php');
 
+// PARCE QUE C'EST NOTRE PROJEEEEEEEEEET
 class Projet extends Sommet
 {
     public $titre;

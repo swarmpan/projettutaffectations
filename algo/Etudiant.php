@@ -14,4 +14,13 @@ class Etudiant extends Sommet
     public $nom;
     public $prenom;
     public $email;
+
+    /**
+     * Etudiant constructor.
+     * @param $login
+     */
+    public function __construct($login)
+    {
+        $this->login = $login;
+    }
 }
