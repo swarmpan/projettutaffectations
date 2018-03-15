@@ -13,6 +13,15 @@ class GrapheAffectation extends Graphe
     public $etudiants;
     public $projets;
 
+    public $affectations;
+
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->affectations = array();
+    }
+
     public function ajouterEtudiant(Etudiant $e) {
         $this->ajouterSommet($e);
         $this->etudiants[] = $e;
@@ -21,5 +30,9 @@ class GrapheAffectation extends Graphe
     public function ajouterProjet(Projet $p) {
         $this->ajouterSommet($p);
         $this->projets[] = $p;
+    }
+
+    public function affecterVoeu(Etudiant $e, Projet $p, int $rang) {
+        $this->affectations[$e->email] = [$p, $rang];
     }
 }

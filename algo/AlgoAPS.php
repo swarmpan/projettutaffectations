@@ -19,8 +19,13 @@ class AlgoAPS
     {
     }
 
-    public function run() {
+    public function run(GrapheAffectation $g) {
+        while (! $this->tousEtudiantsAffectes($g)) {
+            $i = 1;
+            foreach ($g->etudiants as $etudiant) {
 
+            }
+        }
     }
 
     public function tousEtudiantsAffectes(GrapheAffectation $g) {
