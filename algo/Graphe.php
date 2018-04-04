@@ -66,4 +66,14 @@ class Graphe
         }
         return $arcsSortants;
     }
+
+    public function getArcCout($sommet, $i) {
+        $arcs = $this->getArcsFrom($sommet);
+        foreach ($arcs as $arc) {
+            if ($arc->getCout() === $i) {
+                return $arc;
+            }
+        }
+        return null;
+    }
 }
