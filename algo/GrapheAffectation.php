@@ -13,6 +13,7 @@ class GrapheAffectation extends Graphe
     public $etudiants;
     public $projets;
 
+    // Map etudiants -> projets
     public $affectations;
 
 
@@ -34,5 +35,19 @@ class GrapheAffectation extends Graphe
 
     public function affecterVoeu(Etudiant $e, Projet $p, int $rang) {
         $this->affectations[$e->email] = [$p, $rang];
+    }
+
+    public function nbEtudiantsParProjet(Projet $p) {
+        $compteur = 0;
+        foreach ($this->affectations as $affect) {
+            if ($affect[0] === $p) {
+                $compteur++;
+            }
+        }
+        return $compteur;
+    }
+
+    public function supprimerAffectation(Etudiant $e) {
+        unset($this->affectations[$e->email]);
     }
 }
