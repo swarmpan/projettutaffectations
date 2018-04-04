@@ -15,6 +15,33 @@ class Arc
     public $sommetTo;
 
     /**
+     * @return Sommet
+     */
+    public function getCout()
+    {
+        return $this->cout;
+    }
+
+    /**
+     * @return Sommet
+     */
+    public function getSommetFrom()
+    {
+        return $this->sommetFrom;
+    }
+
+    /**
+     * @return Sommet
+     */
+    public function getSommetTo()
+    {
+        return $this->sommetTo;
+    }
+
+
+
+
+    /**
      * Arc constructor.
      * @param $capacite
      * @param $cout

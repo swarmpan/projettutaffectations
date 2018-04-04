@@ -12,4 +12,6 @@ require_once ('Sommet.php');
 class Projet extends Sommet
 {
     public $titre;
+    public $capaciteMin;
+    public $capaciteMax;
 }
