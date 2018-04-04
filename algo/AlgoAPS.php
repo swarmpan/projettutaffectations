@@ -20,24 +20,35 @@ class AlgoAPS
     }
 
     public function run(GrapheAffectation $g) {
-        while (! $this->tousEtudiantsAffectes($g)) {
-            $i = 1;
+        $i = 1;
+
+        while (! $g->tousEtudiantsAffectes()) {
             foreach ($g->etudiants as $etudiant) {
-
+                // trouver l'arc avec cout i
+                $meilleurVoeu = $g->getArcCout($etudiant, $i);
+                $g->affecterVoeu($etudiant, $meilleurVoeu->getSommetTo(), $i);
             }
-        }
-    }
 
-    public function tousEtudiantsAffectes(GrapheAffectation $g) {
-        foreach ($g->etudiants as $etudiant) {
-            if (! $this->estAffecte($g, $etudiant))
-                return false;
-        }
-        return true;
-    }
+            foreach ($g->projets as $projet) {
+                $nbEtud = $g->nbEtudiantsParProjet($projet);
 
-    public function estAffecte(Graphe $graphe, Etudiant $e) {
-        $arcsFrom = $graphe->getArcsFrom($e);
-        return count($arcsFrom) > 0;
+                // si trop d'etudiants dans le projet
+                if ($nbEtud > $projet->capaciteMax) {
+                    // enlever les affectations de n etudiants (au hasard)
+                    $difference = $nbEtud - $projet->capaciteMax;
+
+                    for ($i = 0; $i < $difference; $i++) {
+                        $random = rand(0, $nbEtud - 1);
+                        $g->supprimerAffectation($g->etudiants[$random]);
+                    }
+                }
+            }
+
+            // on passe au i+1 ieme voeu
+            $i++;
+        }
+
+        // check nb etudiants minimum par projet
+        // = groupes en sous effectif
     }
 }

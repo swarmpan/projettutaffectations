@@ -37,7 +37,7 @@ class GrapheAffectation extends Graphe
         $this->affectations[$e->email] = [$p, $rang];
     }
 
-    public function nbEtudiantsParProjet(Projet $p) {
+    public function nbEtudiantsParProjet(Projet $p): int {
         $compteur = 0;
         foreach ($this->affectations as $affect) {
             if ($affect[0] === $p) {
@@ -49,5 +49,18 @@ class GrapheAffectation extends Graphe
 
     public function supprimerAffectation(Etudiant $e) {
         unset($this->affectations[$e->email]);
+    }
+
+    public function estAffecte(Etudiant $e): bool {
+        $arcsFrom = $this->getArcsFrom($e);
+        return count($arcsFrom) > 0;
+    }
+
+    public function tousEtudiantsAffectes(): bool {
+        foreach ($this->etudiants as $etudiant) {
+            if (! $this->estAffecte($etudiant))
+                return false;
+        }
+        return true;
     }
 }
