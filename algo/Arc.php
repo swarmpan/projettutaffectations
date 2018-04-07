@@ -15,15 +15,23 @@ class Arc
     public $sommetTo;
 
     /**
-     * @return Sommet
+     * @return cout
      */
     public function getCout()
     {
         return $this->cout;
     }
+    
+    /**
+     * @return capacite
+     */
+    public function getCapacite()
+    {
+        return $this->capacite;
+    }
 
     /**
-     * @return Sommet
+     * @return SommetFrom
      */
     public function getSommetFrom()
     {
@@ -31,7 +39,7 @@ class Arc
     }
 
     /**
-     * @return Sommet
+     * @return SommetTo
      */
     public function getSommetTo()
     {
