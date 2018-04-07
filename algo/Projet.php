@@ -14,4 +14,33 @@ class Projet extends Sommet
     public $titre;
     public $capaciteMin;
     public $capaciteMax;
+    
+    /**
+     * @return capaciteMin
+     */
+    public function getMin()
+    {
+        return $this->capaciteMin;
+    }
+    
+    /**
+     * @return capaciteMax
+     */
+    public function getMax()
+    {
+        return $this->capaciteMax;
+    }
+    
+    /**
+     * Projet constructor.
+     * @param $titre
+     * @param $capaciteMin
+     * @param $capaciteMax
+     */
+    public function __construct($titre, $capaciteMin = 4, $capaciteMax = 5)
+    {
+        $this->titre = $titre;
+        $this->capaciteMin = $capaciteMin;
+        $this->capaciteMax = $capaciteMax;
+    }
 }
