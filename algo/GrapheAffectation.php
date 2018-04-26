@@ -25,9 +25,13 @@ class GrapheAffectation extends Graphe
     
     public function getArrayProjets() 
     {
-        $this->projets;
+        return $this->projets;
     }
 
+    public function getArrayEtudiants() 
+    {
+        return $this->etudiants;
+    }
     public function ajouterEtudiant(Etudiant $e) {
         $this->ajouterSommet($e);
         $this->etudiants[] = $e;
