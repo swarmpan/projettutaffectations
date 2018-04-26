@@ -22,6 +22,11 @@ class GrapheAffectation extends Graphe
         parent::__construct();
         $this->affectations = array();
     }
+    
+    public function getArrayProjets() 
+    {
+        $this->projets;
+    }
 
     public function ajouterEtudiant(Etudiant $e) {
         $this->ajouterSommet($e);
