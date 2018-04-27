@@ -112,7 +112,7 @@ class SelectProjet
 					$g->affecterVoeu($etudiant, $project, 1);
 				}
     		}
-    		else if ($this->capacite >= $this->nbEtudiants)
+    		elseif ($this->capacite >= $this->nbEtudiants)
                 $this->recherche = false;
             else
     			$this->projetsToSort[] = $project;
