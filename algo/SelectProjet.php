@@ -6,7 +6,7 @@ require_once('GrapheAffectation.php');
 class SelectProjet 
 {
 
-    public projetsInit;
+    public $projetsInit;
 	public $projects;
 	public $capacite;
     public $capaciteTotale;
@@ -14,7 +14,7 @@ class SelectProjet
     public $nbEtudiants;
     public $recherche;
     public $projetsToSort;
-    public $ projetsSorted;
+    public $projetsSorted;
 
 	public function __construct()
     {
@@ -36,8 +36,10 @@ class SelectProjet
         }
 
         if ($this->recherche)
-        {
             $this->selectProjetRank1();
+
+        if ($this->recherche)
+        {
             $this->sortProjet();
             $this->supProject();
         }
@@ -110,7 +112,9 @@ class SelectProjet
 					$g->affecterVoeu($etudiant, $project, 1);
 				}
     		}
-    		else 
+    		else if ($this->capacite >= $this->nbEtudiants)
+                $this->recherche = false;
+            else
     			$this->projetsToSort[] = $project;
     	}
     }
