@@ -74,7 +74,7 @@ class SelectProjet
                 $this->recherche = false;
             }
             else {
-                if ($project->getTotal() >= $project->gerMin() && ) 
+                if ($project->getTotal() >= $project->geTMin()) 
                 {
                     $this->projSelectionnables[] = $project;
                 }
@@ -112,6 +112,10 @@ class SelectProjet
 					$g->affecterVoeu($etudiant, $project, 1);
 				}
     		}
+            elseif ($min <= $nbDemande1) {
+                $this->projects[] = $project;
+                $this->capacite += $nbDemande1;
+            }
     		elseif ($this->capacite >= $this->nbEtudiants)
                 $this->recherche = false;
             else
@@ -134,7 +138,7 @@ function Compare($arg1, $arg2)
         if ($diff1<=$diff2)
             return -1;
         else
-            return 1:
+            return 1;
 } 
 
 

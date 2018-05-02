@@ -13,7 +13,7 @@ class ProjetRanking extends Projet
 	public $demandeTotal;
 	public $nbRanking;
 
-	public function __construct(id, nbRank) 
+	public function __construct($id, $nbRank) 
 	{
 		parent::__construct();
 		$this->idProject = id;
