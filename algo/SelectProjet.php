@@ -74,7 +74,7 @@ class SelectProjet
                 $this->recherche = false;
             }
             else {
-                if ($project->getTotal() >= $project->geTMin()) 
+                if ($project->getTotal() >= $project->getMin()) 
                 {
                     $this->projSelectionnables[] = $project;
                 }
