@@ -15,6 +15,8 @@ class Etudiant extends Sommet
     public $prenom;
     public $email;
 
+    public $affectation; // arc menant vers le projet affecté
+
     /**
      * Etudiant constructor.
      * @param $login
@@ -22,5 +24,6 @@ class Etudiant extends Sommet
     public function __construct($login)
     {
         $this->login = $login;
+        $this->affectation = null;
     }
 }

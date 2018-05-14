@@ -13,14 +13,10 @@ class GrapheAffectation extends Graphe
     public $etudiants;
     public $projets;
 
-    // Map etudiants -> projets
-    public $affectations;
-
 
     public function __construct()
     {
         parent::__construct();
-        $this->affectations = array();
     }
     
     public function getArrayProjets() 
@@ -32,6 +28,7 @@ class GrapheAffectation extends Graphe
     {
         return $this->etudiants;
     }
+
     public function ajouterEtudiant(Etudiant $e) {
         $this->ajouterSommet($e);
         $this->etudiants[] = $e;
@@ -42,27 +39,25 @@ class GrapheAffectation extends Graphe
         $this->projets[] = $p;
     }
 
-    public function affecterVoeu(Etudiant $e, Projet $p, int $rang) {
-        $this->affectations[$e->email] = [$p, $rang];
+    public function affecterVoeu(Etudiant $e, Projet $p) {
+        $e->affectation = $this->getArcFromTo($e, $p);
     }
 
     public function nbEtudiantsParProjet(Projet $p): int {
         $compteur = 0;
-        foreach ($this->affectations as $affect) {
-            if ($affect[0] === $p) {
+        foreach ($this->etudiants as $etud) {
+            if ($this->estAffecte($etud) && $etud->affectation->sommetTo === $p)
                 $compteur++;
-            }
         }
         return $compteur;
     }
 
     public function supprimerAffectation(Etudiant $e) {
-        unset($this->affectations[$e->email]);
+        $e->affectation = null;
     }
 
     public function estAffecte(Etudiant $e): bool {
-        $arcsFrom = $this->getArcsFrom($e);
-        return count($arcsFrom) > 0;
+        return $e->affectation != null;
     }
 
     public function tousEtudiantsAffectes(): bool {
