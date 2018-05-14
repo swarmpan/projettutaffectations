@@ -86,7 +86,7 @@ class ProjetRanking extends Projet
 		$nbRank = 0;
 		for ($ranking = 1; $ranking <= nbRanking; $ranking++)
 		{
-			if ($nbRank > $this->demandePerRanking[$ranking])
+			if ($nbRank < $this->demandePerRanking[$ranking])
 			{
 				$rank = $ranking;
 				$nbRank = $this->demandePerRanking[$ranking];
