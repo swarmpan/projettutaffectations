@@ -9,6 +9,9 @@
 declare(strict_types=1);
 
 require_once ('Graphe.php');
+require_once ('GrapheAffectation.php');
+require_once ('Etudiant.php');
+require_once ('Projet.php');
 require_once ('Sommet.php');
 require_once ('Arc.php');
 
@@ -81,6 +84,24 @@ class GrapheTest extends TestCase
     public function testRechercheArc(Graphe $graphe)
     {
         $arcs = $graphe->getArcsFrom($graphe->getSommets()[0]);
-        $this->assertEquals(count($arcs), 2);
+        $this->assertCount(2, $arcs);
+        $arcs = $graphe->getArcsFrom($graphe->getSommets()[1]);
+        $this->assertCount(1, $arcs);
+
+        $s2 = $graphe->sommets[1];
+        $this->assertEquals($s2, $arcs[0]->sommetFrom);
+        $this->assertEquals(2, $arcs[0]->getCout());
+    }
+
+    /**
+     * @depends testAjoutArc
+     */
+    public function testRechercheCout(Graphe $graphe) {
+        $arcTrouve = $graphe->getArcCout($graphe->sommets[0], 1);
+        $this->assertEquals($graphe->arcs[0], $arcTrouve);
+        $arcTrouve = $graphe->getArcCout($graphe->sommets[0], 5);
+        $this->assertEquals($graphe->arcs[2], $arcTrouve);
+        $arcTrouve = $graphe->getArcCout($graphe->sommets[0], 4);
+        $this->assertNull($arcTrouve);
     }
 }
