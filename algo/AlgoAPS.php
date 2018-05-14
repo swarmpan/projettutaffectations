@@ -26,11 +26,12 @@ class AlgoAPS
             foreach ($g->etudiants as $etudiant) {
                 // trouver l'arc avec cout i
                 $meilleurVoeu = $g->getArcCout($etudiant, $i);
-                $g->affecterVoeu($etudiant, $meilleurVoeu->getSommetTo(), $i);
+                $g->affecterVoeu($etudiant, $meilleurVoeu->getSommetTo());
             }
 
             foreach ($g->projets as $projet) {
                 $nbEtud = $g->nbEtudiantsParProjet($projet);
+                print "projet " . $projet->titre . ", nbetud = " . $nbEtud . "\n";
 
                 // si trop d'etudiants dans le projet
                 if ($nbEtud > $projet->capaciteMax) {
