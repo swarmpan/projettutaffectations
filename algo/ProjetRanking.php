@@ -92,7 +92,7 @@ class ProjetRanking extends Projet
 				$nbRank = $this->demandePerRanking[$ranking];
 			}
 		}
-		$this->moyenne = $average/$total;
+		$this->m = $rank;
 	}
 
 	public function calculTotal() 
