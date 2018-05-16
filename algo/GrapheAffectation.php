@@ -69,11 +69,24 @@ class GrapheAffectation extends Graphe
         return $e->affectation != null;
     }
 
+    public function estAffecteAuProjet(Etudiant $e, Projet $p): bool {
+        return $e->affectation != null && $p != null && $e->affectation->getSommetTo() === $p;
+    }
+
     public function tousEtudiantsAffectes(): bool {
         foreach ($this->etudiants as $etudiant) {
             if (! $this->estAffecte($etudiant))
                 return false;
         }
         return true;
+    }
+
+    public function etudiantsAffectesAuProjet(Projet $p): array {
+        $result = array();
+        foreach ($this->etudiants as $etud) {
+            if ($this->estAffecteAuProjet($etud, $p))
+                $result[] = $etud;
+        }
+        return $result;
     }
 }

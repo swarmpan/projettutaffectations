@@ -19,7 +19,7 @@ class Arc
     public $expo = 0;
 
     /**
-     * @return cout
+     * @return int
      */
     public function getCout()
     {
@@ -27,7 +27,7 @@ class Arc
     }
     
     /**
-     * @return capacite
+     * @return int
      */
     public function getCapacite()
     {
@@ -35,7 +35,7 @@ class Arc
     }
 
     /**
-     * @return SommetFrom
+     * @return Sommet
      */
     public function getSommetFrom()
     {
@@ -43,7 +43,7 @@ class Arc
     }
 
     /**
-     * @return SommetTo
+     * @return Sommet
      */
     public function getSommetTo()
     {

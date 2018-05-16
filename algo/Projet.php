@@ -16,7 +16,7 @@ class Projet extends Sommet
     public $capaciteMax;
     
     /**
-     * @return capaciteMin
+     * @return int
      */
     public function getMin()
     {
@@ -24,7 +24,7 @@ class Projet extends Sommet
     }
     
     /**
-     * @return capaciteMax
+     * @return int
      */
     public function getMax()
     {
