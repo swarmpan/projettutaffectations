@@ -14,6 +14,10 @@ class Arc
     public $sommetFrom;
     public $sommetTo;
 
+    public $coefficient = 1;
+    public $puissance = 1;
+    public $expo = 0;
+
     /**
      * @return cout
      */
@@ -44,6 +48,21 @@ class Arc
     public function getSommetTo()
     {
         return $this->sommetTo;
+    }
+
+    public function coutArc()
+    {
+        //pour linéaire choisir $puissance 1 et $expo 0
+        // pour puissance prendre $coefficient 1 et $expo 0
+        //pour expo prendre $lineaire et $puissance 1
+        $power = pow($this->getCout(), $puissance);
+        if ($expo == 0) {
+            $exponentielle = 1;
+        }
+        else {
+            $exponentielle = pow($expo, $this->getCout());
+        }
+        return $coefficient*$power*$exponentielle;
     }
 
 

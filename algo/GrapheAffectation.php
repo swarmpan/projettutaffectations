@@ -12,11 +12,13 @@ class GrapheAffectation extends Graphe
 {
     public $etudiants;
     public $projets;
+    public $coutTotal;
 
 
     public function __construct()
     {
         parent::__construct();
+        $this->coutTotal = 0;
     }
     
     public function getArrayProjets() 
@@ -27,6 +29,11 @@ class GrapheAffectation extends Graphe
     public function getArrayEtudiants() 
     {
         return $this->etudiants;
+    }
+
+    public function getCoutTotal()
+    {
+        return $this->coutTotal;
     }
 
     public function ajouterEtudiant(Etudiant $e) {
@@ -42,6 +49,7 @@ class GrapheAffectation extends Graphe
     public function affecterVoeu(Etudiant $e, Projet $p) {
         $e->affectation = $this->getArcFromTo($e, $p);
         $e->rangaffect = $e->affectation->getCout();
+        $this->coutTotal += $e->affectation->coutArc();
     }
 
     public function nbEtudiantsParProjet(Projet $p): int {
