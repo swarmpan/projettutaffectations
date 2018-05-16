@@ -41,6 +41,7 @@ class GrapheAffectation extends Graphe
 
     public function affecterVoeu(Etudiant $e, Projet $p) {
         $e->affectation = $this->getArcFromTo($e, $p);
+        $e->rangaffect = $e->affectation->getCout();
     }
 
     public function nbEtudiantsParProjet(Projet $p): int {

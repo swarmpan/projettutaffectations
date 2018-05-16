@@ -14,6 +14,7 @@ class Etudiant extends Sommet
     public $nom;
     public $prenom;
     public $email;
+    public $rangaffect;
 
     public $affectation; // arc menant vers le projet affecté
 
