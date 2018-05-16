@@ -24,9 +24,12 @@ class AlgoAPS
 
         while (! $g->tousEtudiantsAffectes()) {
             foreach ($g->etudiants as $etudiant) {
-                // trouver l'arc avec cout i
-                $meilleurVoeu = $g->getArcCout($etudiant, $i);
-                $g->affecterVoeu($etudiant, $meilleurVoeu->getSommetTo());
+                // si l'etudiant n'a pas d'affectation
+                if (! $g->estAffecte($etudiant)) {
+                    // trouver l'arc avec cout i
+                    $meilleurVoeu = $g->getArcCout($etudiant, $i);
+                    $g->affecterVoeu($etudiant, $meilleurVoeu->getSommetTo());
+                }
             }
 
             foreach ($g->projets as $projet) {
@@ -35,12 +38,15 @@ class AlgoAPS
 
                 // si trop d'etudiants dans le projet
                 if ($nbEtud > $projet->capaciteMax) {
-                    // enlever les affectations de n etudiants (au hasard)
+                    // recuperer les etudiants affectés a ce projet
+                    $etudAffectes = $g->etudiantsAffectesAuProjet($projet);
+
+                    // parmi eux, enlever les affectations de n etudiants (au hasard)
                     $difference = $nbEtud - $projet->capaciteMax;
 
                     for ($i = 0; $i < $difference; $i++) {
-                        $random = rand(0, $nbEtud - 1);
-                        $g->supprimerAffectation($g->etudiants[$random]);
+                        $random = rand(0, count($etudAffectes) - 1);
+                        $g->supprimerAffectation($etudAffectes[$random]);
                     }
                 }
             }

@@ -77,7 +77,22 @@ class AlgoAPSTest extends TestCase
         $algo->run($this->grapheTest);
         $this->assertTrue($this->grapheTest->tousEtudiantsAffectes());
         foreach ($this->grapheTest->etudiants as $etud) {
-            print $etud->login . " affecte a " . $etud->affectation->sommetTo->titre . "\n";
+            print $etud->login . " affecte a " . $etud->affectation->sommetTo->titre . ", voeu n° " . $etud->affectation->getCout() . "\n";
+        }
+        $this->assertEquals($this->grapheTest->projets[0], $this->grapheTest->etudiants[0]->affectation->sommetTo);
+        $this->assertEquals($this->grapheTest->projets[1], $this->grapheTest->etudiants[1]->affectation->sommetTo);
+        $this->assertEquals($this->grapheTest->projets[1], $this->grapheTest->etudiants[5]->affectation->sommetTo);
+    }
+
+    public function testCapaciteAtteinte()
+    {
+        ($this->grapheTest->projets[0])->capaciteMax = 2;
+
+        $algo = new AlgoAPS();
+        $algo->run($this->grapheTest);
+        $this->assertTrue($this->grapheTest->tousEtudiantsAffectes());
+        foreach ($this->grapheTest->etudiants as $etud) {
+            print $etud->login . " affecte a " . $etud->affectation->sommetTo->titre . ", voeu n° " . $etud->affectation->cout . "\n";
         }
     }
 
