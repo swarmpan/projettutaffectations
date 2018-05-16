@@ -55,14 +55,14 @@ class Arc
         //pour linéaire choisir $puissance 1 et $expo 0
         // pour puissance prendre $coefficient 1 et $expo 0
         //pour expo prendre $lineaire et $puissance 1
-        $power = pow($this->getCout(), $puissance);
-        if ($expo == 0) {
+        $power = pow($this->getCout(), $this->puissance);
+        if ($this->expo == 0) {
             $exponentielle = 1;
         }
         else {
-            $exponentielle = pow($expo, $this->getCout());
+            $exponentielle = pow($this->expo, $this->getCout());
         }
-        return $coefficient*$power*$exponentielle;
+        return $this->coefficient*$power*$exponentielle;
     }
 
 
