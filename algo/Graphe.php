@@ -67,7 +67,7 @@ class Graphe
         return $arcsSortants;
     }
 
-    public function getArcFromTo(Sommet $s1, Sommet $s2): Arc {
+    public function getArcFromTo(Sommet $s1, Sommet $s2) {
         foreach ($this->arcs as $arc) {
             if ($arc->sommetFrom === $s1 && $arc->sommetTo === $s2)
                 return $arc;
@@ -75,7 +75,7 @@ class Graphe
         return null;
     }
 
-    public function getArcCout($sommet, $i): Arc {
+    public function getArcCout($sommet, $i) {
         $arcs = $this->getArcsFrom($sommet);
         foreach ($arcs as $arc) {
             if ($arc->getCout() === $i) {

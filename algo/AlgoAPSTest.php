@@ -86,7 +86,8 @@ class AlgoAPSTest extends TestCase
 
     public function testCapaciteAtteinte()
     {
-        ($this->grapheTest->projets[0])->capaciteMax = 2;
+        $p0 = $this->grapheTest->projets[0];
+        $p0->capaciteMax = 2;
 
         $algo = new AlgoAPS();
         $algo->run($this->grapheTest);
@@ -94,6 +95,7 @@ class AlgoAPSTest extends TestCase
         foreach ($this->grapheTest->etudiants as $etud) {
             print $etud->login . " affecte a " . $etud->affectation->sommetTo->titre . ", voeu n° " . $etud->affectation->cout . "\n";
         }
+        $this->assertCount(2, $this->grapheTest->etudiantsAffectesAuProjet($p0));
     }
 
 
