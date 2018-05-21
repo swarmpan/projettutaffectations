@@ -73,8 +73,13 @@ class AlgoAPSTest extends TestCase
     public function testBigDataset()
     {
         $graphe = (new RandomTestSet())->generateGraph();
+        $graphe->projets[2]->capaciteMax = 3;
+        $graphe->projets[3]->capaciteMax = 3;
         $algo = new AlgoAPS();
         $algo->run($graphe);
-        $this->assertTrue($this->grapheTest->tousEtudiantsAffectes());
+        $this->assertTrue($graphe->tousEtudiantsAffectes());
+        foreach ($graphe->etudiants as $etud) {
+            print $etud->login . " affecte a " . $etud->affectation->sommetTo->titre . ", voeu n° " . $etud->affectation->cout . "\n";
+        }
     }
 }
