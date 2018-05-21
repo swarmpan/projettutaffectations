@@ -22,11 +22,12 @@ class AlgoAPS
     public function run(GrapheAffectation $g) {
         $i = 1;
 
-        while (! $g->tousEtudiantsAffectes()) {
+        while (! $g->tousEtudiantsAffectes() && $i <= count($g->projets)) {
+
             foreach ($g->etudiants as $etudiant) {
                 // si l'etudiant n'a pas d'affectation
                 if (! $g->estAffecte($etudiant)) {
-                    // trouver l'arc avec cout i
+                    // trouver le voeu i
                     $meilleurVoeu = $g->getArcCout($etudiant, $i);
                     $g->affecterVoeu($etudiant, $meilleurVoeu->getSommetTo());
                 }

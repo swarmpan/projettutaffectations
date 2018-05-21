@@ -8,47 +8,19 @@
 
 use PHPUnit\Framework\TestCase;
 
-require_once ('GrapheAffectation.php');
-require_once ('Etudiant.php');
-require_once ('Projet.php');
-require_once ('AlgoAPS.php');
+require_once('GrapheAffectation.php');
+require_once('Etudiant.php');
+require_once('Projet.php');
+require_once('AlgoAPS.php');
+require_once ('TestSet.php');
 
 class AlgoAPSTest extends TestCase
 {
     public $grapheTest;
 
     public function setUp() {
-        $this->grapheTest = new GrapheAffectation();
-
-        // creation de 6 etudiants
-        for ($i = 0; $i < 6; $i++) {
-            $e = new Etudiant((string)$i);
-            $this->grapheTest->ajouterEtudiant($e);
-        }
-
-        // creation de 3 projets
-        for ($i = 0; $i < 3; $i++) {
-            $p = new Projet("proj${i}");
-            $this->grapheTest->ajouterProjet($p);
-        }
-
-        $voeux = [
-            [1,2,3],
-            [3,1,2],
-            [2,3,1],
-            [1,3,2],
-            [1,2,3],
-            [2,1,3]
-        ];
-
-        // attribution des voeux
-        for ($e = 0; $e < 6; $e++) {
-            for ($p = 0; $p < 3; $p++) {
-                $arc = new Arc($this->grapheTest->etudiants[$e], $this->grapheTest->projets[$p],
-                    $voeux[$e][$p]);
-                $this->grapheTest->ajouterArc($arc);
-            }
-        }
+        $testset = new SmallTestSet();
+        $this->grapheTest = $testset->generateGraph();
     }
 
     public function testGraphe()
@@ -80,7 +52,7 @@ class AlgoAPSTest extends TestCase
             print $etud->login . " affecte a " . $etud->affectation->sommetTo->titre . ", voeu n° " . $etud->affectation->getCout() . "\n";
         }
         $this->assertEquals($this->grapheTest->projets[0], $this->grapheTest->etudiants[0]->affectation->sommetTo);
-        $this->assertEquals($this->grapheTest->projets[1], $this->grapheTest->etudiants[1]->affectation->sommetTo);
+        $this->assertEquals($this->grapheTest->projets[2], $this->grapheTest->etudiants[1]->affectation->sommetTo);
         $this->assertEquals($this->grapheTest->projets[1], $this->grapheTest->etudiants[5]->affectation->sommetTo);
     }
 
@@ -98,5 +70,11 @@ class AlgoAPSTest extends TestCase
         $this->assertCount(2, $this->grapheTest->etudiantsAffectesAuProjet($p0));
     }
 
-
+    public function testBigDataset()
+    {
+        $graphe = (new RandomTestSet())->generateGraph();
+        $algo = new AlgoAPS();
+        $algo->run($graphe);
+        $this->assertTrue($this->grapheTest->tousEtudiantsAffectes());
+    }
 }

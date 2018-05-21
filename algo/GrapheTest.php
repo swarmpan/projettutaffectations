@@ -8,12 +8,12 @@
 
 declare(strict_types=1);
 
-require_once ('Graphe.php');
-require_once ('GrapheAffectation.php');
-require_once ('Etudiant.php');
-require_once ('Projet.php');
-require_once ('Sommet.php');
-require_once ('Arc.php');
+require_once('Graphe.php');
+require_once('GrapheAffectation.php');
+require_once('Etudiant.php');
+require_once('Projet.php');
+require_once('Sommet.php');
+require_once('Arc.php');
 
 use PHPUnit\Framework\TestCase;
 
