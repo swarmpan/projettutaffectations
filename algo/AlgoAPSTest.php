@@ -72,7 +72,7 @@ class AlgoAPSTest extends TestCase
 
     public function testBigDataset()
     {
-        $graphe = (new RandomTestSet())->generateGraph();
+        $graphe = (new InequalTestSet())->generateGraph();
         $graphe->projets[2]->capaciteMax = 3;
         $graphe->projets[3]->capaciteMax = 3;
         $algo = new AlgoAPS();

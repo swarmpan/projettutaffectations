@@ -22,7 +22,7 @@ class AlgoAPS
     public function run(GrapheAffectation $g) {
         $i = 1;
 
-        while (! $g->tousEtudiantsAffectes() && $i <= count($g->projets)) {
+        while (! $g->tousEtudiantsAffectes() && $i <= count($g->getArcsFrom($g->etudiants[0]))) {
 
             foreach ($g->etudiants as $etudiant) {
                 // si l'etudiant n'a pas d'affectation
