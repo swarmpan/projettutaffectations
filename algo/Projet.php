@@ -37,7 +37,7 @@ class Projet extends Sommet
      * @param $capaciteMin
      * @param $capaciteMax
      */
-    public function __construct($titre, $capaciteMin = 4, $capaciteMax = 5)
+    public function __construct($titre, $capaciteMin = 3, $capaciteMax = 4)
     {
         $this->titre = $titre;
         $this->capaciteMin = $capaciteMin;

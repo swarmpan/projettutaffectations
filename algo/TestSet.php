@@ -60,6 +60,7 @@ class SmallTestSet extends TestSet
     }
 }
 
+// données parfaitement uniformes
 class RandomTestSet extends TestSet
 {
     /**
@@ -95,6 +96,7 @@ class RandomTestSet extends TestSet
     }
 }
 
+// un peu modifié pour être équiprobable mais quand même généré de manière uniforme
 class InequalTestSet extends TestSet
 {
     public function __construct()
