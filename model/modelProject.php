@@ -11,7 +11,7 @@ class ModelProject extends Model {
 	private $nbMinStudent;
 	private $nbMaxStudent;
 	private $nbMaxGroup;
-	protected static $table = "project_test";
+	protected static $table = "project";
 	protected static $primary = "id_project";
 	
 	function getIDProject()		{return $this->id_project;}

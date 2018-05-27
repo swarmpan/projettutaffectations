@@ -27,7 +27,7 @@ fwrite($file, $line);
 $projects = ModelProject::getAllOrderAscBy('id_project');
 $line = "param: PROJECT: Cmin Cmax :=\n";
 foreach ($projects as $row) {
-    $line .= $row['id_project'] . ' ' . $row['nbMinStudent'] . ' ' . $row['nbMaxStudent'] . "\n";
+    $line .= $row->getIDProject() . ' ' . $row->getNbMinStudent() . ' ' . $row->getNbMaxStudent() . "\n";
 }
 $line .= ";\n";
 fwrite($file, $line);
@@ -36,7 +36,7 @@ fwrite($file, $line);
 //data
 $line = 'param cost : ';
 foreach ($projects as $row) {
-    $line .= $row['id_project'] . ' ';
+    $line .= $row->getIDProject() . ' ';
 }
 $line .= ":=\n";
 

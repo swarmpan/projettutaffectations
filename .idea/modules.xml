@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$USER_HOME$/Documents/insa/projetut 2018/affectations/.idea/affectations.iml" filepath="$USER_HOME$/Documents/insa/projetut 2018/affectations/.idea/affectations.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/www.iml" filepath="$PROJECT_DIR$/.idea/www.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/affectations.iml" filepath="$PROJECT_DIR$/.idea/affectations.iml" />
     </modules>
   </component>
 </project>
