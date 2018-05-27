@@ -1,0 +1,325 @@
+@charset "iso-8859-1";
+
+/**
+ * Projet  : Affectation des etudiants aux modules d'ouverture
+ * Desc.   : Feuille de style par defaut (pour l'affichage a l'ecran)
+ * Auteurs : Devineau, Lambert, Lucas, Vu-Brugier
+ * Cree le : 2005-04-09
+ * Rev.    : 2005-05-03
+ */
+
+body {
+    padding :0;
+    margin: 0;
+    font-family: "Trebuchet ms", sans-serif;
+    color: #606060;
+}
+
+td {
+    padding :0;
+    margin: 0;
+    font-family: "Trebuchet ms", sans-serif;
+    font-size: 0.9em;
+    color: #606060;
+}
+
+/**
+ * Mise en page (avec des calques)
+ */
+
+#top {
+    background-color: #e7e4d3;
+    height: 7em;
+    border-bottom: 1px solid #a19f93;
+}
+
+#logo {float: left;}
+
+#logo img {
+    margin: 0;
+    padding: 0.4em 0 0 0.8em;
+}
+
+#title {
+    text-align: right;
+    color: olivedrab;
+}
+
+#title h1 {
+    color: olivedrab;
+    margin: 0;
+    padding: 0.5em 0.8em 0 0;
+}
+
+#page {padding: 0}
+
+#content {
+    width: 100%;
+    float: right;
+    margin-left: -12em;
+}
+
+#inner-content {
+    margin-left: 12em;
+    padding: 10px;
+    border-left: 1px dashed #a19f93;
+}
+
+#sidebar {
+    width: 12em;
+    float: left;
+}
+
+#sidebar h3 {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 140%;
+    font-weight: bold;
+    padding: 0 0 0 30px;
+    margin: 10px 0 0 0;
+}
+
+#sidebar ul {
+    display: block;
+    list-style: none;
+    padding: 0 0 0 10px;
+    margin: 6px 0 18px 0;
+}
+
+#sidebar li {
+    display: block;
+    padding: 0;
+    margin: 4px 0 0 0;
+}
+
+#sidebar a {
+    color: olivedrab;
+    text-decoration: none;
+}
+
+#sidebar a:hover, #sidebar a:focus, #sidebar a:active {
+    text-decoration: underline;
+}
+
+#footer {
+    clear: both;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+#footer address {
+    border-top: 1px solid #a19f93;
+    margin: 0;
+    padding: 5px;
+}
+
+/**
+ * Style de tableaux
+ */
+#tab_auth {
+    border: 1px solid #a19f93;
+    border-collapse: collapse;
+    text-align: center;
+    margin: auto;
+}
+
+#tab_auth th {
+    color: olivedrab;
+    background-color: #e7e4d3;
+    border: 1px solid #a19f93;
+    border-collapse: collapse;
+    padding: 0.3em 2em 0.3em 2em;
+}
+
+#tab_auth td {
+    padding: 0.2em 1em 0.2em 0.5em;
+    text-align: left;
+}
+
+#tab_auth td.right {
+    padding: 0.2em 0.5em 0.2em 1em;
+    text-align: right;
+}
+
+#tab_voeux {
+    border: 1px solid #a19f93;
+    border-collapse: collapse;
+    text-align: center;
+    margin: auto;
+}
+
+#tab_voeux th {
+    color: olivedrab;
+    background-color: #e7e4d3;
+    border: 1px solid #a19f93;
+    border-collapse: collapse;
+    padding: 0.3em 1em 0.3em 1em;
+}
+
+#tab_voeux td {
+    padding: 0.2em 1em 0.2em 0.5em;
+    text-align: left;
+}
+
+#tab_voeux td.right {
+    padding: 0.2em 0.5em 0.2em 1em;
+    text-align: right;
+}
+
+#tabresult {
+    border-style: none;
+    border-width: 0;
+    padding: 0.2em;
+}
+
+#tabresult td {
+    padding: 0.2em 1em 1.4em 1em;
+    border-style: none;
+}
+
+table.module td {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+table.affect td {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+table.stat td {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+tr.bg0 {background-color: #f3f1e9}
+
+/**
+ * Elements
+ */
+img {border: none}
+
+p {text-align: justify}
+
+.error {color: #FF8C00}
+
+a {
+    color: olivedrab;
+    text-decoration: none;
+}
+
+a:hover, a:focus, a:active {
+    text-decoration: underline;
+}
+
+button {
+    width: 7em;
+    text-align: center;
+}
+
+button_admin {
+    width: 7em;
+    text-align: center;
+}
+
+td.right {
+    text-align: right;
+}
+
+.button {
+    display: block;
+    background: #569AF3;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.button_admin {
+    display: block;
+    background: #f03232;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+a.button:hover{
+    background: #3478D1;
+}
+
+a.button_admin:hover{
+    background: #C73232;
+}
+
+.hidden {
+	display:none;
+}
+
+div.notification{
+	padding: 0px;
+	display: block;
+	position: relative;
+	border:2px solid #01DF3A;
+	background: #CEF6CE;
+	box-shadow: 0px 4px 5px #AAAAAA;
+	text-align: center;
+}
+
+div.notification-info{
+	display:block;
+	position: relative;
+	border:2px solid #FF7F00;
+	background: #FFD39B;
+	box-shadow: 0px 4px 5px #AAAAAA;
+	text-align: center;
+}
+
+div.notification-error{
+	display:block;
+	position: relative;
+	border:2px solid #DF0101;
+	background: #F6CECE;
+	box-shadow: 0px 4px 5px #AAAAAA;
+	text-align: center;
+}
+
+td.projet{
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:8px;
+	padding-bottom:8px;
+	vertical-align: top;
+}
+td.name{
+	width:20%;
+	text-align:center;
+}
+td.desc{
+	width:48%;
+	text-align:left;
+}
+td.stud{
+	width:14%;
+	text-align:center;
+}
+td.grp{
+	width:10%;
+	text-align:center;
+}
+td.act{
+	width:8%;
+	text-align:center;
+}
+td.tut{
+	width:8%;
+	text-align:center;
+}

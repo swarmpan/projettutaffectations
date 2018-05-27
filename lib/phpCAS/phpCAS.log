@@ -1,0 +1,2569 @@
+3726 .START (2018-04-26 15:53:41) phpCAS-1.3.5+ ****************** [CAS.php:468]
+3726 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+3726 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+3726 .|    |    Starting a new session ST-1563-Nc0hTdHbEvAuohu5TOJl-casinsa-toulousefr [Client.php:932]
+3726 .|    |    Session is authenticated as: mega [Client.php:936]
+3726 .|    <= ''
+3726 .<= ''
+3726 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+3726 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+3726 .<= ''
+3726 .=> phpCAS::forceAuthentication() [CAS.php:27]
+3726 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+3726 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+3726 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+3726 .|    |    |    |    user = `mega' [Client.php:1622]
+3726 .|    |    |    <= true
+3726 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+3726 .|    |    <= true
+3726 .|    |    no need to authenticate [Client.php:1282]
+3726 .|    <= true
+3726 .<= ''
+9E20 .START (2018-04-26 15:54:48) phpCAS-1.3.5+ ****************** [CAS.php:468]
+9E20 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+9E20 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+9E20 .|    |    Starting a new session ST-1563-Nc0hTdHbEvAuohu5TOJl-casinsa-toulousefr [Client.php:932]
+9E20 .|    |    Session is authenticated as: mega [Client.php:936]
+9E20 .|    <= ''
+9E20 .<= ''
+9E20 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+9E20 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+9E20 .<= ''
+9E20 .=> phpCAS::forceAuthentication() [CAS.php:27]
+9E20 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+9E20 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+9E20 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+9E20 .|    |    |    |    user = `mega' [Client.php:1622]
+9E20 .|    |    |    <= true
+9E20 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+9E20 .|    |    <= true
+9E20 .|    |    no need to authenticate [Client.php:1282]
+9E20 .|    <= true
+9E20 .<= ''
+9E20 .=> phpCAS::logout() [CAS.php:42]
+9E20 .|    => CAS_Client::logout(array ()) [CAS.php:1450]
+9E20 .|    |    Prepare redirect to : https://cas.insa-toulouse.fr/cas/logout [Client.php:1696]
+9E20 .|    |    Destroying session : ST-1563-Nc0hTdHbEvAuohu5TOJl-casinsa-toulousefr [Client.php:1698]
+9E20 .|    |    Session terminated [Client.php:1702]
+9E20 .|    |    exit()
+9E20 .|    |    -
+9E20 .|    -
+3263 .START (2018-04-26 15:55:29) phpCAS-1.3.5+ ****************** [CAS.php:468]
+3263 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+3263 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+3263 .|    |    Starting a new session ST-1563-Nc0hTdHbEvAuohu5TOJl-casinsa-toulousefr [Client.php:932]
+3263 .|    |    Session is not authenticated [Client.php:938]
+3263 .|    <= ''
+3263 .<= ''
+3263 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+3263 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+3263 .<= ''
+3263 .=> phpCAS::forceAuthentication() [CAS.php:27]
+3263 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+3263 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+3263 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+3263 .|    |    |    |    no user found [Client.php:1635]
+3263 .|    |    |    <= false
+3263 .|    |    |    no ticket found [Client.php:1494]
+3263 .|    |    <= false
+3263 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+3263 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+3263 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+3263 .|    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php?logout= [Client.php:3548]
+3263 .|    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php?logout='
+3263 .|    |    |    <= 'https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php%3Flogout%3D'
+3263 .|    |    |    Redirect to : https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php%3Flogout%3D [Client.php:1663]
+3263 .|    |    |    exit()
+3263 .|    |    |    -
+3263 .|    |    -
+3263 .|    -
+7FB2 .START (2018-04-26 15:55:30) phpCAS-1.3.5+ ****************** [CAS.php:468]
+7FB2 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+7FB2 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+7FB2 .|    |    Starting a new session ST-1563-Nc0hTdHbEvAuohu5TOJl-casinsa-toulousefr [Client.php:932]
+7FB2 .|    |    Session is not authenticated [Client.php:938]
+7FB2 .|    <= ''
+7FB2 .<= ''
+7FB2 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+7FB2 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+7FB2 .<= ''
+7FB2 .=> phpCAS::forceAuthentication() [CAS.php:27]
+7FB2 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+7FB2 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+7FB2 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+7FB2 .|    |    |    |    no user found [Client.php:1635]
+7FB2 .|    |    |    <= false
+7FB2 .|    |    |    no ticket found [Client.php:1494]
+7FB2 .|    |    <= false
+7FB2 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+7FB2 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+7FB2 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+7FB2 .|    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+7FB2 .|    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+7FB2 .|    |    |    <= 'https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+7FB2 .|    |    |    Redirect to : https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php [Client.php:1663]
+7FB2 .|    |    |    exit()
+7FB2 .|    |    |    -
+7FB2 .|    |    -
+7FB2 .|    -
+3CF2 .START (2018-04-26 15:55:32) phpCAS-1.3.5+ ****************** [CAS.php:468]
+3CF2 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+3CF2 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+3CF2 .|    |    Starting a new session ST-1563-Nc0hTdHbEvAuohu5TOJl-casinsa-toulousefr [Client.php:932]
+3CF2 .|    |    Session is not authenticated [Client.php:938]
+3CF2 .|    |    Ticket 'ST-2068-NcbmDhBU3Mdd6ejVHj0l-cas.insa-toulouse.fr' found [Client.php:1020]
+3CF2 .|    <= ''
+3CF2 .<= ''
+3CF2 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+3CF2 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+3CF2 .<= ''
+3CF2 .=> phpCAS::forceAuthentication() [CAS.php:27]
+3CF2 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+3CF2 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+3CF2 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+3CF2 .|    |    |    |    no user found [Client.php:1635]
+3CF2 .|    |    |    <= false
+3CF2 .|    |    |    CAS 2.0 ticket `ST-2068-NcbmDhBU3Mdd6ejVHj0l-cas.insa-toulouse.fr' is present [Client.php:1447]
+3CF2 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+3CF2 .|    |    |    |     [Client.php:3169]
+3CF2 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+3CF2 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+3CF2 .|    |    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+3CF2 .|    |    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+3CF2 .|    |    |    |    <= 'https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+3CF2 .|    |    |    |    => CAS_Client::_readURL('https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php&ticket=ST-2068-NcbmDhBU3Mdd6ejVHj0l-cas.insa-toulouse.fr', NULL, NULL, NULL) [Client.php:3191]
+3CF2 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+3CF2 .|    |    |    |    |    |    Response Body: 
+3CF2 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+3CF2 .|    |    |    |    |    |    	<cas:authenticationSuccess>
+3CF2 .|    |    |    |    |    |    		<cas:user>mega</cas:user>
+3CF2 .|    |    |    |    |    |    
+3CF2 .|    |    |    |    |    |    
+3CF2 .|    |    |    |    |    |    	</cas:authenticationSuccess>
+3CF2 .|    |    |    |    |    |    </cas:serviceResponse>
+3CF2 .|    |    |    |    |    |     [CurlRequest.php:84]
+3CF2 .|    |    |    |    |    <= true
+3CF2 .|    |    |    |    <= true
+3CF2 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+3CF2 .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+3CF2 .|    |    |    |    <= ''
+3CF2 .|    |    |    |    Storing Proxy List [Client.php:3270]
+3CF2 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+3CF2 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+3CF2 .|    |    |    |    <= true
+3CF2 .|    |    |    |    => CAS_Client::_renameSession('ST-2068-NcbmDhBU3Mdd6ejVHj0l-cas.insa-toulouse.fr') [Client.php:3293]
+3CF2 .|    |    |    |    |    Killing session: ST-1563-Nc0hTdHbEvAuohu5TOJl-casinsa-toulousefr [Client.php:3682]
+3CF2 .|    |    |    |    |    Starting session: ST-2068-NcbmDhBU3Mdd6ejVHj0l-casinsa-toulousefr [Client.php:3686]
+3CF2 .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+3CF2 .|    |    |    |    <= ''
+3CF2 .|    |    |    <= true
+3CF2 .|    |    |    CAS 2.0 ticket `ST-2068-NcbmDhBU3Mdd6ejVHj0l-cas.insa-toulouse.fr' was validated [Client.php:1453]
+3CF2 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+3CF2 .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+3CF2 .|    |    |    Prepare redirect to : http://localhost/projet_tutore/connect/test.php [Client.php:1518]
+3CF2 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+3CF2 .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+3CF2 .|    |    |    exit()
+3CF2 .|    |    |    -
+3CF2 .|    |    -
+3CF2 .|    -
+43A5 .START (2018-04-26 15:55:34) phpCAS-1.3.5+ ****************** [CAS.php:468]
+43A5 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+43A5 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+43A5 .|    |    Starting a new session ST-2068-NcbmDhBU3Mdd6ejVHj0l-casinsa-toulousefr [Client.php:932]
+43A5 .|    |    Session is authenticated as: mega [Client.php:936]
+43A5 .|    <= ''
+43A5 .<= ''
+43A5 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+43A5 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+43A5 .<= ''
+43A5 .=> phpCAS::forceAuthentication() [CAS.php:27]
+43A5 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+43A5 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+43A5 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+43A5 .|    |    |    |    user = `mega' [Client.php:1622]
+43A5 .|    |    |    <= true
+43A5 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+43A5 .|    |    <= true
+43A5 .|    |    no need to authenticate [Client.php:1282]
+43A5 .|    <= true
+43A5 .<= ''
+2CA2 .START (2018-04-26 15:55:39) phpCAS-1.3.5+ ****************** [CAS.php:468]
+2CA2 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+2CA2 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+2CA2 .|    |    Starting a new session ST-2068-NcbmDhBU3Mdd6ejVHj0l-casinsa-toulousefr [Client.php:932]
+2CA2 .|    |    Session is authenticated as: mega [Client.php:936]
+2CA2 .|    <= ''
+2CA2 .<= ''
+2CA2 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+2CA2 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+2CA2 .<= ''
+2CA2 .=> phpCAS::forceAuthentication() [CAS.php:27]
+2CA2 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+2CA2 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+2CA2 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+2CA2 .|    |    |    |    user = `mega' [Client.php:1622]
+2CA2 .|    |    |    <= true
+2CA2 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+2CA2 .|    |    <= true
+2CA2 .|    |    no need to authenticate [Client.php:1282]
+2CA2 .|    <= true
+2CA2 .<= ''
+2CA2 .=> phpCAS::logout() [CAS.php:42]
+2CA2 .|    => CAS_Client::logout(array ()) [CAS.php:1450]
+2CA2 .|    |    Prepare redirect to : https://cas.insa-toulouse.fr/cas/logout [Client.php:1696]
+2CA2 .|    |    Destroying session : ST-2068-NcbmDhBU3Mdd6ejVHj0l-casinsa-toulousefr [Client.php:1698]
+2CA2 .|    |    Session terminated [Client.php:1702]
+2CA2 .|    |    exit()
+2CA2 .|    |    -
+2CA2 .|    -
+A403 .START (2018-04-26 15:55:42) phpCAS-1.3.5+ ****************** [CAS.php:468]
+A403 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+A403 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+A403 .|    |    Starting a new session ST-2068-NcbmDhBU3Mdd6ejVHj0l-casinsa-toulousefr [Client.php:932]
+A403 .|    |    Session is not authenticated [Client.php:938]
+A403 .|    <= ''
+A403 .<= ''
+A403 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+A403 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+A403 .<= ''
+A403 .=> phpCAS::forceAuthentication() [CAS.php:27]
+A403 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+A403 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+A403 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+A403 .|    |    |    |    no user found [Client.php:1635]
+A403 .|    |    |    <= false
+A403 .|    |    |    no ticket found [Client.php:1494]
+A403 .|    |    <= false
+A403 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+A403 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+A403 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+A403 .|    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+A403 .|    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+A403 .|    |    |    <= 'https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+A403 .|    |    |    Redirect to : https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php [Client.php:1663]
+A403 .|    |    |    exit()
+A403 .|    |    |    -
+A403 .|    |    -
+A403 .|    -
+A598 .START (2018-04-26 15:55:43) phpCAS-1.3.5+ ****************** [CAS.php:468]
+A598 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+A598 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+A598 .|    |    Starting a new session ST-2068-NcbmDhBU3Mdd6ejVHj0l-casinsa-toulousefr [Client.php:932]
+A598 .|    |    Session is not authenticated [Client.php:938]
+A598 .|    |    Ticket 'ST-2076-MIF2hYZEUjHwgcNHKmvR-cas.insa-toulouse.fr' found [Client.php:1020]
+A598 .|    <= ''
+A598 .<= ''
+A598 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+A598 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+A598 .<= ''
+A598 .=> phpCAS::forceAuthentication() [CAS.php:27]
+A598 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+A598 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+A598 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+A598 .|    |    |    |    no user found [Client.php:1635]
+A598 .|    |    |    <= false
+A598 .|    |    |    CAS 2.0 ticket `ST-2076-MIF2hYZEUjHwgcNHKmvR-cas.insa-toulouse.fr' is present [Client.php:1447]
+A598 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+A598 .|    |    |    |     [Client.php:3169]
+A598 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+A598 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+A598 .|    |    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+A598 .|    |    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+A598 .|    |    |    |    <= 'https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+A598 .|    |    |    |    => CAS_Client::_readURL('https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php&ticket=ST-2076-MIF2hYZEUjHwgcNHKmvR-cas.insa-toulouse.fr', NULL, NULL, NULL) [Client.php:3191]
+A598 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+A598 .|    |    |    |    |    |    Response Body: 
+A598 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+A598 .|    |    |    |    |    |    	<cas:authenticationSuccess>
+A598 .|    |    |    |    |    |    		<cas:user>mega</cas:user>
+A598 .|    |    |    |    |    |    
+A598 .|    |    |    |    |    |    
+A598 .|    |    |    |    |    |    	</cas:authenticationSuccess>
+A598 .|    |    |    |    |    |    </cas:serviceResponse>
+A598 .|    |    |    |    |    |     [CurlRequest.php:84]
+A598 .|    |    |    |    |    <= true
+A598 .|    |    |    |    <= true
+A598 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+A598 .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+A598 .|    |    |    |    <= ''
+A598 .|    |    |    |    Storing Proxy List [Client.php:3270]
+A598 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+A598 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+A598 .|    |    |    |    <= true
+A598 .|    |    |    |    => CAS_Client::_renameSession('ST-2076-MIF2hYZEUjHwgcNHKmvR-cas.insa-toulouse.fr') [Client.php:3293]
+A598 .|    |    |    |    |    Killing session: ST-2068-NcbmDhBU3Mdd6ejVHj0l-casinsa-toulousefr [Client.php:3682]
+A598 .|    |    |    |    |    Starting session: ST-2076-MIF2hYZEUjHwgcNHKmvR-casinsa-toulousefr [Client.php:3686]
+A598 .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+A598 .|    |    |    |    <= ''
+A598 .|    |    |    <= true
+A598 .|    |    |    CAS 2.0 ticket `ST-2076-MIF2hYZEUjHwgcNHKmvR-cas.insa-toulouse.fr' was validated [Client.php:1453]
+A598 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+A598 .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+A598 .|    |    |    Prepare redirect to : http://localhost/projet_tutore/connect/test.php [Client.php:1518]
+A598 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+A598 .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+A598 .|    |    |    exit()
+A598 .|    |    |    -
+A598 .|    |    -
+A598 .|    -
+5EC4 .START (2018-04-26 15:55:48) phpCAS-1.3.5+ ****************** [CAS.php:468]
+5EC4 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+5EC4 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+5EC4 .|    |    Starting a new session ST-2076-MIF2hYZEUjHwgcNHKmvR-casinsa-toulousefr [Client.php:932]
+5EC4 .|    |    Session is authenticated as: mega [Client.php:936]
+5EC4 .|    <= ''
+5EC4 .<= ''
+5EC4 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+5EC4 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+5EC4 .<= ''
+5EC4 .=> phpCAS::forceAuthentication() [CAS.php:27]
+5EC4 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+5EC4 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+5EC4 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+5EC4 .|    |    |    |    user = `mega' [Client.php:1622]
+5EC4 .|    |    |    <= true
+5EC4 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+5EC4 .|    |    <= true
+5EC4 .|    |    no need to authenticate [Client.php:1282]
+5EC4 .|    <= true
+5EC4 .<= ''
+B50A .START (2018-04-26 15:55:53) phpCAS-1.3.5+ ****************** [CAS.php:468]
+B50A .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+B50A .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+B50A .|    |    Starting a new session ST-2076-MIF2hYZEUjHwgcNHKmvR-casinsa-toulousefr [Client.php:932]
+B50A .|    |    Session is authenticated as: mega [Client.php:936]
+B50A .|    <= ''
+B50A .<= ''
+B50A .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+B50A .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+B50A .<= ''
+B50A .=> phpCAS::forceAuthentication() [CAS.php:27]
+B50A .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+B50A .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+B50A .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+B50A .|    |    |    |    user = `mega' [Client.php:1622]
+B50A .|    |    |    <= true
+B50A .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+B50A .|    |    <= true
+B50A .|    |    no need to authenticate [Client.php:1282]
+B50A .|    <= true
+B50A .<= ''
+B1BD .START (2018-04-26 15:56:32) phpCAS-1.3.5+ ****************** [CAS.php:468]
+B1BD .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+B1BD .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+B1BD .|    |    Starting a new session ST-2076-MIF2hYZEUjHwgcNHKmvR-casinsa-toulousefr [Client.php:932]
+B1BD .|    |    Session is authenticated as: mega [Client.php:936]
+B1BD .|    <= ''
+B1BD .<= ''
+B1BD .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+B1BD .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+B1BD .<= ''
+B1BD .=> phpCAS::forceAuthentication() [CAS.php:27]
+B1BD .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+B1BD .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+B1BD .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+B1BD .|    |    |    |    user = `mega' [Client.php:1622]
+B1BD .|    |    |    <= true
+B1BD .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+B1BD .|    |    <= true
+B1BD .|    |    no need to authenticate [Client.php:1282]
+B1BD .|    <= true
+B1BD .<= ''
+B1BD .=> phpCAS::logout() [CAS.php:44]
+B1BD .|    => CAS_Client::logout(array ()) [CAS.php:1450]
+B1BD .|    |    Prepare redirect to : https://cas.insa-toulouse.fr/cas/logout [Client.php:1696]
+B1BD .|    |    Destroying session : ST-2076-MIF2hYZEUjHwgcNHKmvR-casinsa-toulousefr [Client.php:1698]
+B1BD .|    |    Session terminated [Client.php:1702]
+B1BD .|    |    exit()
+B1BD .|    |    -
+B1BD .|    -
+1FAB .START (2018-04-26 15:56:40) phpCAS-1.3.5+ ****************** [CAS.php:468]
+1FAB .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+1FAB .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+1FAB .|    |    Starting a new session ST-2076-MIF2hYZEUjHwgcNHKmvR-casinsa-toulousefr [Client.php:932]
+1FAB .|    |    Session is not authenticated [Client.php:938]
+1FAB .|    <= ''
+1FAB .<= ''
+1FAB .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+1FAB .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+1FAB .<= ''
+1FAB .=> phpCAS::forceAuthentication() [CAS.php:27]
+1FAB .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+1FAB .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+1FAB .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+1FAB .|    |    |    |    no user found [Client.php:1635]
+1FAB .|    |    |    <= false
+1FAB .|    |    |    no ticket found [Client.php:1494]
+1FAB .|    |    <= false
+1FAB .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+1FAB .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+1FAB .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+1FAB .|    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+1FAB .|    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+1FAB .|    |    |    <= 'https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+1FAB .|    |    |    Redirect to : https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php [Client.php:1663]
+1FAB .|    |    |    exit()
+1FAB .|    |    |    -
+1FAB .|    |    -
+1FAB .|    -
+5D34 .START (2018-04-26 15:56:41) phpCAS-1.3.5+ ****************** [CAS.php:468]
+5D34 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+5D34 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+5D34 .|    |    Starting a new session ST-2076-MIF2hYZEUjHwgcNHKmvR-casinsa-toulousefr [Client.php:932]
+5D34 .|    |    Session is not authenticated [Client.php:938]
+5D34 .|    |    Ticket 'ST-2082-ui3tRhqQTgmubHuBOdNn-cas.insa-toulouse.fr' found [Client.php:1020]
+5D34 .|    <= ''
+5D34 .<= ''
+5D34 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+5D34 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+5D34 .<= ''
+5D34 .=> phpCAS::forceAuthentication() [CAS.php:27]
+5D34 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+5D34 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+5D34 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+5D34 .|    |    |    |    no user found [Client.php:1635]
+5D34 .|    |    |    <= false
+5D34 .|    |    |    CAS 2.0 ticket `ST-2082-ui3tRhqQTgmubHuBOdNn-cas.insa-toulouse.fr' is present [Client.php:1447]
+5D34 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+5D34 .|    |    |    |     [Client.php:3169]
+5D34 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+5D34 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+5D34 .|    |    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+5D34 .|    |    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+5D34 .|    |    |    |    <= 'https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+5D34 .|    |    |    |    => CAS_Client::_readURL('https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php&ticket=ST-2082-ui3tRhqQTgmubHuBOdNn-cas.insa-toulouse.fr', NULL, NULL, NULL) [Client.php:3191]
+5D34 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+5D34 .|    |    |    |    |    |    Response Body: 
+5D34 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+5D34 .|    |    |    |    |    |    	<cas:authenticationSuccess>
+5D34 .|    |    |    |    |    |    		<cas:user>mega</cas:user>
+5D34 .|    |    |    |    |    |    
+5D34 .|    |    |    |    |    |    
+5D34 .|    |    |    |    |    |    	</cas:authenticationSuccess>
+5D34 .|    |    |    |    |    |    </cas:serviceResponse>
+5D34 .|    |    |    |    |    |     [CurlRequest.php:84]
+5D34 .|    |    |    |    |    <= true
+5D34 .|    |    |    |    <= true
+5D34 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+5D34 .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+5D34 .|    |    |    |    <= ''
+5D34 .|    |    |    |    Storing Proxy List [Client.php:3270]
+5D34 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+5D34 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+5D34 .|    |    |    |    <= true
+5D34 .|    |    |    |    => CAS_Client::_renameSession('ST-2082-ui3tRhqQTgmubHuBOdNn-cas.insa-toulouse.fr') [Client.php:3293]
+5D34 .|    |    |    |    |    Killing session: ST-2076-MIF2hYZEUjHwgcNHKmvR-casinsa-toulousefr [Client.php:3682]
+5D34 .|    |    |    |    |    Starting session: ST-2082-ui3tRhqQTgmubHuBOdNn-casinsa-toulousefr [Client.php:3686]
+5D34 .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+5D34 .|    |    |    |    <= ''
+5D34 .|    |    |    <= true
+5D34 .|    |    |    CAS 2.0 ticket `ST-2082-ui3tRhqQTgmubHuBOdNn-cas.insa-toulouse.fr' was validated [Client.php:1453]
+5D34 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+5D34 .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+5D34 .|    |    |    Prepare redirect to : http://localhost/projet_tutore/connect/test.php [Client.php:1518]
+5D34 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+5D34 .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+5D34 .|    |    |    exit()
+5D34 .|    |    |    -
+5D34 .|    |    -
+5D34 .|    -
+2C3F .START (2018-04-26 15:56:46) phpCAS-1.3.5+ ****************** [CAS.php:468]
+2C3F .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+2C3F .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+2C3F .|    |    Starting a new session ST-2082-ui3tRhqQTgmubHuBOdNn-casinsa-toulousefr [Client.php:932]
+2C3F .|    |    Session is authenticated as: mega [Client.php:936]
+2C3F .|    <= ''
+2C3F .<= ''
+2C3F .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+2C3F .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+2C3F .<= ''
+2C3F .=> phpCAS::forceAuthentication() [CAS.php:27]
+2C3F .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+2C3F .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+2C3F .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+2C3F .|    |    |    |    user = `mega' [Client.php:1622]
+2C3F .|    |    |    <= true
+2C3F .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+2C3F .|    |    <= true
+2C3F .|    |    no need to authenticate [Client.php:1282]
+2C3F .|    <= true
+2C3F .<= ''
+9009 .START (2018-04-26 15:57:00) phpCAS-1.3.5+ ****************** [CAS.php:468]
+9009 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+9009 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+9009 .|    |    Starting a new session ST-2082-ui3tRhqQTgmubHuBOdNn-casinsa-toulousefr [Client.php:932]
+9009 .|    |    Session is authenticated as: mega [Client.php:936]
+9009 .|    <= ''
+9009 .<= ''
+9009 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+9009 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+9009 .<= ''
+9009 .=> phpCAS::forceAuthentication() [CAS.php:27]
+9009 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+9009 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+9009 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+9009 .|    |    |    |    user = `mega' [Client.php:1622]
+9009 .|    |    |    <= true
+9009 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+9009 .|    |    <= true
+9009 .|    |    no need to authenticate [Client.php:1282]
+9009 .|    <= true
+9009 .<= ''
+9009 .=> phpCAS::logout() [CAS.php:42]
+9009 .|    => CAS_Client::logout(array ()) [CAS.php:1450]
+9009 .|    |    Prepare redirect to : https://cas.insa-toulouse.fr/cas/logout [Client.php:1696]
+9009 .|    |    Destroying session : ST-2082-ui3tRhqQTgmubHuBOdNn-casinsa-toulousefr [Client.php:1698]
+9009 .|    |    Session terminated [Client.php:1702]
+9009 .|    |    exit()
+9009 .|    |    -
+9009 .|    -
+AF89 .START (2018-04-26 16:47:40) phpCAS-1.3.5+ ****************** [CAS.php:468]
+AF89 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+AF89 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+AF89 .|    |    Starting a new session ST-2082-ui3tRhqQTgmubHuBOdNn-casinsa-toulousefr [Client.php:932]
+AF89 .|    |    Session is not authenticated [Client.php:938]
+AF89 .|    <= ''
+AF89 .<= ''
+AF89 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+AF89 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+AF89 .<= ''
+AF89 .=> phpCAS::forceAuthentication() [CAS.php:27]
+AF89 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+AF89 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+AF89 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+AF89 .|    |    |    |    no user found [Client.php:1635]
+AF89 .|    |    |    <= false
+AF89 .|    |    |    no ticket found [Client.php:1494]
+AF89 .|    |    <= false
+AF89 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+AF89 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+AF89 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+AF89 .|    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+AF89 .|    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+AF89 .|    |    |    <= 'https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+AF89 .|    |    |    Redirect to : https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php [Client.php:1663]
+AF89 .|    |    |    exit()
+AF89 .|    |    |    -
+AF89 .|    |    -
+AF89 .|    -
+5353 .START (2018-04-26 16:47:43) phpCAS-1.3.5+ ****************** [CAS.php:468]
+5353 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+5353 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+5353 .|    |    Starting a new session ST-2082-ui3tRhqQTgmubHuBOdNn-casinsa-toulousefr [Client.php:932]
+5353 .|    |    Session is not authenticated [Client.php:938]
+5353 .|    |    Ticket 'ST-2472-OV1wS2xUQO7foG6rHst4-cas.insa-toulouse.fr' found [Client.php:1020]
+5353 .|    <= ''
+5353 .<= ''
+5353 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+5353 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+5353 .<= ''
+5353 .=> phpCAS::forceAuthentication() [CAS.php:27]
+5353 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+5353 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+5353 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+5353 .|    |    |    |    no user found [Client.php:1635]
+5353 .|    |    |    <= false
+5353 .|    |    |    CAS 2.0 ticket `ST-2472-OV1wS2xUQO7foG6rHst4-cas.insa-toulouse.fr' is present [Client.php:1447]
+5353 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+5353 .|    |    |    |     [Client.php:3169]
+5353 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+5353 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+5353 .|    |    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+5353 .|    |    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+5353 .|    |    |    |    <= 'https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+5353 .|    |    |    |    => CAS_Client::_readURL('https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php&ticket=ST-2472-OV1wS2xUQO7foG6rHst4-cas.insa-toulouse.fr', NULL, NULL, NULL) [Client.php:3191]
+5353 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+5353 .|    |    |    |    |    |    Response Body: 
+5353 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+5353 .|    |    |    |    |    |    	<cas:authenticationSuccess>
+5353 .|    |    |    |    |    |    		<cas:user>mega</cas:user>
+5353 .|    |    |    |    |    |    
+5353 .|    |    |    |    |    |    
+5353 .|    |    |    |    |    |    	</cas:authenticationSuccess>
+5353 .|    |    |    |    |    |    </cas:serviceResponse>
+5353 .|    |    |    |    |    |     [CurlRequest.php:84]
+5353 .|    |    |    |    |    <= true
+5353 .|    |    |    |    <= true
+5353 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+5353 .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+5353 .|    |    |    |    <= ''
+5353 .|    |    |    |    Storing Proxy List [Client.php:3270]
+5353 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+5353 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+5353 .|    |    |    |    <= true
+5353 .|    |    |    |    => CAS_Client::_renameSession('ST-2472-OV1wS2xUQO7foG6rHst4-cas.insa-toulouse.fr') [Client.php:3293]
+5353 .|    |    |    |    |    Killing session: ST-2082-ui3tRhqQTgmubHuBOdNn-casinsa-toulousefr [Client.php:3682]
+5353 .|    |    |    |    |    Starting session: ST-2472-OV1wS2xUQO7foG6rHst4-casinsa-toulousefr [Client.php:3686]
+5353 .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+5353 .|    |    |    |    <= ''
+5353 .|    |    |    <= true
+5353 .|    |    |    CAS 2.0 ticket `ST-2472-OV1wS2xUQO7foG6rHst4-cas.insa-toulouse.fr' was validated [Client.php:1453]
+5353 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+5353 .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+5353 .|    |    |    Prepare redirect to : http://localhost/projet_tutore/connect/test.php [Client.php:1518]
+5353 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+5353 .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+5353 .|    |    |    exit()
+5353 .|    |    |    -
+5353 .|    |    -
+5353 .|    -
+B87A .START (2018-04-26 16:47:43) phpCAS-1.3.5+ ****************** [CAS.php:468]
+B87A .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+B87A .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+B87A .|    |    Starting a new session ST-2472-OV1wS2xUQO7foG6rHst4-casinsa-toulousefr [Client.php:932]
+B87A .|    |    Session is authenticated as: mega [Client.php:936]
+B87A .|    <= ''
+B87A .<= ''
+B87A .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+B87A .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+B87A .<= ''
+B87A .=> phpCAS::forceAuthentication() [CAS.php:27]
+B87A .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+B87A .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+B87A .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+B87A .|    |    |    |    user = `mega' [Client.php:1622]
+B87A .|    |    |    <= true
+B87A .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+B87A .|    |    <= true
+B87A .|    |    no need to authenticate [Client.php:1282]
+B87A .|    <= true
+B87A .<= ''
+DA66 .START (2018-04-26 16:48:59) phpCAS-1.3.5+ ****************** [CAS.php:468]
+DA66 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+DA66 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+DA66 .|    |    Starting a new session ST-2472-OV1wS2xUQO7foG6rHst4-casinsa-toulousefr [Client.php:932]
+DA66 .|    |    Session is authenticated as: mega [Client.php:936]
+DA66 .|    <= ''
+DA66 .<= ''
+DA66 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+DA66 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+DA66 .<= ''
+DA66 .=> phpCAS::forceAuthentication() [CAS.php:27]
+DA66 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+DA66 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+DA66 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+DA66 .|    |    |    |    user = `mega' [Client.php:1622]
+DA66 .|    |    |    <= true
+DA66 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+DA66 .|    |    <= true
+DA66 .|    |    no need to authenticate [Client.php:1282]
+DA66 .|    <= true
+DA66 .<= ''
+DA66 .=> phpCAS::logout() [CAS.php:42]
+DA66 .|    => CAS_Client::logout(array ()) [CAS.php:1450]
+DA66 .|    |    Prepare redirect to : https://cas.insa-toulouse.fr/cas/logout [Client.php:1696]
+DA66 .|    |    Destroying session : ST-2472-OV1wS2xUQO7foG6rHst4-casinsa-toulousefr [Client.php:1698]
+DA66 .|    |    Session terminated [Client.php:1702]
+DA66 .|    |    exit()
+DA66 .|    |    -
+DA66 .|    -
+DCF7 .START (2018-04-26 16:54:48) phpCAS-1.3.5+ ****************** [CAS.php:468]
+DCF7 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+DCF7 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+DCF7 .|    |    Starting a new session ST-2472-OV1wS2xUQO7foG6rHst4-casinsa-toulousefr [Client.php:932]
+DCF7 .|    |    Session is not authenticated [Client.php:938]
+DCF7 .|    <= ''
+DCF7 .<= ''
+DCF7 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+DCF7 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1667]
+DCF7 .<= ''
+DCF7 .=> phpCAS::forceAuthentication() [CAS.php:27]
+DCF7 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+DCF7 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+DCF7 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+DCF7 .|    |    |    |    no user found [Client.php:1635]
+DCF7 .|    |    |    <= false
+DCF7 .|    |    |    no ticket found [Client.php:1494]
+DCF7 .|    |    <= false
+DCF7 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+DCF7 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+DCF7 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+DCF7 .|    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+DCF7 .|    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+DCF7 .|    |    |    <= 'https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+DCF7 .|    |    |    Redirect to : https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php [Client.php:1663]
+DCF7 .|    |    |    exit()
+DCF7 .|    |    |    -
+DCF7 .|    |    -
+DCF7 .|    -
+8219 .START (2018-04-26 16:54:50) phpCAS-1.3.5+ ****************** [CAS.php:468]
+8219 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+8219 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+8219 .|    |    Starting a new session ST-2472-OV1wS2xUQO7foG6rHst4-casinsa-toulousefr [Client.php:932]
+8219 .|    |    Session is not authenticated [Client.php:938]
+8219 .|    |    Ticket 'ST-2525-SX7LXiEf3125CrmjXpz1-cas.insa-toulouse.fr' found [Client.php:1020]
+8219 .|    <= ''
+8219 .<= ''
+8219 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+8219 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1667]
+8219 .<= ''
+8219 .=> phpCAS::forceAuthentication() [CAS.php:27]
+8219 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+8219 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+8219 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+8219 .|    |    |    |    no user found [Client.php:1635]
+8219 .|    |    |    <= false
+8219 .|    |    |    CAS 2.0 ticket `ST-2525-SX7LXiEf3125CrmjXpz1-cas.insa-toulouse.fr' is present [Client.php:1447]
+8219 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+8219 .|    |    |    |     [Client.php:3169]
+8219 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+8219 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+8219 .|    |    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+8219 .|    |    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+8219 .|    |    |    |    <= 'https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+8219 .|    |    |    |    => CAS_Client::_readURL('https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php&ticket=ST-2525-SX7LXiEf3125CrmjXpz1-cas.insa-toulouse.fr', NULL, NULL, NULL) [Client.php:3191]
+8219 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+8219 .|    |    |    |    |    |    Response Body: 
+8219 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+8219 .|    |    |    |    |    |    	<cas:authenticationSuccess>
+8219 .|    |    |    |    |    |    		<cas:user>mega</cas:user>
+8219 .|    |    |    |    |    |    
+8219 .|    |    |    |    |    |    
+8219 .|    |    |    |    |    |    	</cas:authenticationSuccess>
+8219 .|    |    |    |    |    |    </cas:serviceResponse>
+8219 .|    |    |    |    |    |     [CurlRequest.php:84]
+8219 .|    |    |    |    |    <= true
+8219 .|    |    |    |    <= true
+8219 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+8219 .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+8219 .|    |    |    |    <= ''
+8219 .|    |    |    |    Storing Proxy List [Client.php:3270]
+8219 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+8219 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+8219 .|    |    |    |    <= true
+8219 .|    |    |    |    => CAS_Client::_renameSession('ST-2525-SX7LXiEf3125CrmjXpz1-cas.insa-toulouse.fr') [Client.php:3293]
+8219 .|    |    |    |    |    Killing session: ST-2472-OV1wS2xUQO7foG6rHst4-casinsa-toulousefr [Client.php:3682]
+8219 .|    |    |    |    |    Starting session: ST-2525-SX7LXiEf3125CrmjXpz1-casinsa-toulousefr [Client.php:3686]
+8219 .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+8219 .|    |    |    |    <= ''
+8219 .|    |    |    <= true
+8219 .|    |    |    CAS 2.0 ticket `ST-2525-SX7LXiEf3125CrmjXpz1-cas.insa-toulouse.fr' was validated [Client.php:1453]
+8219 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+8219 .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+8219 .|    |    |    Prepare redirect to : http://localhost/projet_tutore/connect/test.php [Client.php:1518]
+8219 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+8219 .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+8219 .|    |    |    exit()
+8219 .|    |    |    -
+8219 .|    |    -
+8219 .|    -
+E03B .START (2018-04-26 16:54:51) phpCAS-1.3.5+ ****************** [CAS.php:468]
+E03B .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+E03B .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+E03B .|    |    Starting a new session ST-2525-SX7LXiEf3125CrmjXpz1-casinsa-toulousefr [Client.php:932]
+E03B .|    |    Session is authenticated as: mega [Client.php:936]
+E03B .|    <= ''
+E03B .<= ''
+E03B .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+E03B .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1667]
+E03B .<= ''
+E03B .=> phpCAS::forceAuthentication() [CAS.php:27]
+E03B .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+E03B .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+E03B .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+E03B .|    |    |    |    user = `mega' [Client.php:1622]
+E03B .|    |    |    <= true
+E03B .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+E03B .|    |    <= true
+E03B .|    |    no need to authenticate [Client.php:1282]
+E03B .|    <= true
+E03B .<= ''
+FF41 .START (2018-04-26 16:54:55) phpCAS-1.3.5+ ****************** [CAS.php:468]
+FF41 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+FF41 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+FF41 .|    |    Starting a new session ST-2525-SX7LXiEf3125CrmjXpz1-casinsa-toulousefr [Client.php:932]
+FF41 .|    |    Session is authenticated as: mega [Client.php:936]
+FF41 .|    <= ''
+FF41 .<= ''
+FF41 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+FF41 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1667]
+FF41 .<= ''
+FF41 .=> phpCAS::forceAuthentication() [CAS.php:27]
+FF41 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+FF41 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+FF41 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+FF41 .|    |    |    |    user = `mega' [Client.php:1622]
+FF41 .|    |    |    <= true
+FF41 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+FF41 .|    |    <= true
+FF41 .|    |    no need to authenticate [Client.php:1282]
+FF41 .|    <= true
+FF41 .<= ''
+FF41 .=> phpCAS::logout2nofinalpage() [CAS.php:42]
+FF41 .|    => CAS_Client::logout(array ()) [CAS.php:1475]
+FF41 .|    |    Prepare redirect to : https://cas.insa-toulouse.fr/cas/logout [Client.php:1696]
+FF41 .|    |    Destroying session : ST-2525-SX7LXiEf3125CrmjXpz1-casinsa-toulousefr [Client.php:1698]
+FF41 .|    |    Session terminated [Client.php:1702]
+FF41 .|    |    exit()
+FF41 .|    |    -
+FF41 .|    -
+D13E .START (2018-04-26 16:55:28) phpCAS-1.3.5+ ****************** [CAS.php:468]
+D13E .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+D13E .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+D13E .|    |    Starting a new session ST-2525-SX7LXiEf3125CrmjXpz1-casinsa-toulousefr [Client.php:932]
+D13E .|    |    Session is not authenticated [Client.php:938]
+D13E .|    <= ''
+D13E .<= ''
+D13E .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+D13E .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1646]
+D13E .<= ''
+D13E .=> phpCAS::forceAuthentication() [CAS.php:27]
+D13E .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+D13E .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+D13E .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+D13E .|    |    |    |    no user found [Client.php:1635]
+D13E .|    |    |    <= false
+D13E .|    |    |    no ticket found [Client.php:1494]
+D13E .|    |    <= false
+D13E .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+D13E .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+D13E .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+D13E .|    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+D13E .|    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+D13E .|    |    |    <= 'https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+D13E .|    |    |    Redirect to : https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php [Client.php:1663]
+D13E .|    |    |    exit()
+D13E .|    |    |    -
+D13E .|    |    -
+D13E .|    -
+6777 .START (2018-04-26 16:55:30) phpCAS-1.3.5+ ****************** [CAS.php:468]
+6777 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+6777 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+6777 .|    |    Starting a new session ST-2525-SX7LXiEf3125CrmjXpz1-casinsa-toulousefr [Client.php:932]
+6777 .|    |    Session is not authenticated [Client.php:938]
+6777 .|    |    Ticket 'ST-2529-brxVEZhPSguBgUzxxoyY-cas.insa-toulouse.fr' found [Client.php:1020]
+6777 .|    <= ''
+6777 .<= ''
+6777 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+6777 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1646]
+6777 .<= ''
+6777 .=> phpCAS::forceAuthentication() [CAS.php:27]
+6777 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+6777 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+6777 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+6777 .|    |    |    |    no user found [Client.php:1635]
+6777 .|    |    |    <= false
+6777 .|    |    |    CAS 2.0 ticket `ST-2529-brxVEZhPSguBgUzxxoyY-cas.insa-toulouse.fr' is present [Client.php:1447]
+6777 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+6777 .|    |    |    |     [Client.php:3169]
+6777 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+6777 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+6777 .|    |    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+6777 .|    |    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+6777 .|    |    |    |    <= 'https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+6777 .|    |    |    |    => CAS_Client::_readURL('https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php&ticket=ST-2529-brxVEZhPSguBgUzxxoyY-cas.insa-toulouse.fr', NULL, NULL, NULL) [Client.php:3191]
+6777 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+6777 .|    |    |    |    |    |    Response Body: 
+6777 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+6777 .|    |    |    |    |    |    	<cas:authenticationSuccess>
+6777 .|    |    |    |    |    |    		<cas:user>mega</cas:user>
+6777 .|    |    |    |    |    |    
+6777 .|    |    |    |    |    |    
+6777 .|    |    |    |    |    |    	</cas:authenticationSuccess>
+6777 .|    |    |    |    |    |    </cas:serviceResponse>
+6777 .|    |    |    |    |    |     [CurlRequest.php:84]
+6777 .|    |    |    |    |    <= true
+6777 .|    |    |    |    <= true
+6777 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+6777 .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+6777 .|    |    |    |    <= ''
+6777 .|    |    |    |    Storing Proxy List [Client.php:3270]
+6777 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+6777 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+6777 .|    |    |    |    <= true
+6777 .|    |    |    |    => CAS_Client::_renameSession('ST-2529-brxVEZhPSguBgUzxxoyY-cas.insa-toulouse.fr') [Client.php:3293]
+6777 .|    |    |    |    |    Killing session: ST-2525-SX7LXiEf3125CrmjXpz1-casinsa-toulousefr [Client.php:3682]
+6777 .|    |    |    |    |    Starting session: ST-2529-brxVEZhPSguBgUzxxoyY-casinsa-toulousefr [Client.php:3686]
+6777 .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+6777 .|    |    |    |    <= ''
+6777 .|    |    |    <= true
+6777 .|    |    |    CAS 2.0 ticket `ST-2529-brxVEZhPSguBgUzxxoyY-cas.insa-toulouse.fr' was validated [Client.php:1453]
+6777 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+6777 .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+6777 .|    |    |    Prepare redirect to : http://localhost/projet_tutore/connect/test.php [Client.php:1518]
+6777 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+6777 .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+6777 .|    |    |    exit()
+6777 .|    |    |    -
+6777 .|    |    -
+6777 .|    -
+8EB5 .START (2018-04-26 16:55:31) phpCAS-1.3.5+ ****************** [CAS.php:468]
+8EB5 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+8EB5 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+8EB5 .|    |    Starting a new session ST-2529-brxVEZhPSguBgUzxxoyY-casinsa-toulousefr [Client.php:932]
+8EB5 .|    |    Session is authenticated as: mega [Client.php:936]
+8EB5 .|    <= ''
+8EB5 .<= ''
+8EB5 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+8EB5 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1646]
+8EB5 .<= ''
+8EB5 .=> phpCAS::forceAuthentication() [CAS.php:27]
+8EB5 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+8EB5 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+8EB5 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+8EB5 .|    |    |    |    user = `mega' [Client.php:1622]
+8EB5 .|    |    |    <= true
+8EB5 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+8EB5 .|    |    <= true
+8EB5 .|    |    no need to authenticate [Client.php:1282]
+8EB5 .|    <= true
+8EB5 .<= ''
+87FB .START (2018-04-26 16:55:34) phpCAS-1.3.5+ ****************** [CAS.php:468]
+87FB .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+87FB .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+87FB .|    |    Starting a new session ST-2529-brxVEZhPSguBgUzxxoyY-casinsa-toulousefr [Client.php:932]
+87FB .|    |    Session is authenticated as: mega [Client.php:936]
+87FB .|    <= ''
+87FB .<= ''
+87FB .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+87FB .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1646]
+87FB .<= ''
+87FB .=> phpCAS::forceAuthentication() [CAS.php:27]
+87FB .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+87FB .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+87FB .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+87FB .|    |    |    |    user = `mega' [Client.php:1622]
+87FB .|    |    |    <= true
+87FB .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+87FB .|    |    <= true
+87FB .|    |    no need to authenticate [Client.php:1282]
+87FB .|    <= true
+87FB .<= ''
+87FB .=> phpCAS::logout() [CAS.php:42]
+69BD .START (2018-04-26 16:55:36) phpCAS-1.3.5+ ****************** [CAS.php:468]
+69BD .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+69BD .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+69BD .|    |    Starting a new session ST-2529-brxVEZhPSguBgUzxxoyY-casinsa-toulousefr [Client.php:932]
+69BD .|    |    Session is authenticated as: mega [Client.php:936]
+69BD .|    <= ''
+69BD .<= ''
+69BD .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+69BD .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1646]
+69BD .<= ''
+69BD .=> phpCAS::forceAuthentication() [CAS.php:27]
+69BD .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+69BD .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+69BD .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+69BD .|    |    |    |    user = `mega' [Client.php:1622]
+69BD .|    |    |    <= true
+69BD .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+69BD .|    |    <= true
+69BD .|    |    no need to authenticate [Client.php:1282]
+69BD .|    <= true
+69BD .<= ''
+0143 .START (2018-04-26 16:55:46) phpCAS-1.3.5+ ****************** [CAS.php:468]
+0143 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+0143 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+0143 .|    |    Starting a new session ST-2529-brxVEZhPSguBgUzxxoyY-casinsa-toulousefr [Client.php:932]
+0143 .|    |    Session is authenticated as: mega [Client.php:936]
+0143 .|    <= ''
+0143 .<= ''
+0143 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+0143 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1646]
+0143 .<= ''
+0143 .=> phpCAS::forceAuthentication() [CAS.php:27]
+0143 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+0143 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+0143 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+0143 .|    |    |    |    user = `mega' [Client.php:1622]
+0143 .|    |    |    <= true
+0143 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+0143 .|    |    <= true
+0143 .|    |    no need to authenticate [Client.php:1282]
+0143 .|    <= true
+0143 .<= ''
+0E15 .START (2018-04-26 16:55:49) phpCAS-1.3.5+ ****************** [CAS.php:468]
+0E15 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+0E15 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+0E15 .|    |    Starting a new session ST-2529-brxVEZhPSguBgUzxxoyY-casinsa-toulousefr [Client.php:932]
+0E15 .|    |    Session is authenticated as: mega [Client.php:936]
+0E15 .|    <= ''
+0E15 .<= ''
+0E15 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+0E15 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1646]
+0E15 .<= ''
+0E15 .=> phpCAS::forceAuthentication() [CAS.php:27]
+0E15 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+0E15 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+0E15 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+0E15 .|    |    |    |    user = `mega' [Client.php:1622]
+0E15 .|    |    |    <= true
+0E15 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+0E15 .|    |    <= true
+0E15 .|    |    no need to authenticate [Client.php:1282]
+0E15 .|    <= true
+0E15 .<= ''
+0E15 .=> phpCAS::logout() [CAS.php:42]
+2720 .START (2018-04-26 16:55:51) phpCAS-1.3.5+ ****************** [CAS.php:468]
+2720 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+2720 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+2720 .|    |    Starting a new session ST-2529-brxVEZhPSguBgUzxxoyY-casinsa-toulousefr [Client.php:932]
+2720 .|    |    Session is authenticated as: mega [Client.php:936]
+2720 .|    <= ''
+2720 .<= ''
+2720 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+2720 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1646]
+2720 .<= ''
+2720 .=> phpCAS::forceAuthentication() [CAS.php:27]
+2720 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+2720 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+2720 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+2720 .|    |    |    |    user = `mega' [Client.php:1622]
+2720 .|    |    |    <= true
+2720 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+2720 .|    |    <= true
+2720 .|    |    no need to authenticate [Client.php:1282]
+2720 .|    <= true
+2720 .<= ''
+56D2 .START (2018-04-26 16:56:30) phpCAS-1.3.5+ ****************** [CAS.php:468]
+56D2 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+56D2 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+56D2 .|    |    Starting a new session ST-2529-brxVEZhPSguBgUzxxoyY-casinsa-toulousefr [Client.php:932]
+56D2 .|    |    Session is authenticated as: mega [Client.php:936]
+56D2 .|    <= ''
+56D2 .<= ''
+56D2 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+56D2 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1646]
+56D2 .<= ''
+56D2 .=> phpCAS::forceAuthentication() [CAS.php:27]
+56D2 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+56D2 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+56D2 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+56D2 .|    |    |    |    user = `mega' [Client.php:1622]
+56D2 .|    |    |    <= true
+56D2 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+56D2 .|    |    <= true
+56D2 .|    |    no need to authenticate [Client.php:1282]
+56D2 .|    <= true
+56D2 .<= ''
+CDC1 .START (2018-04-26 16:56:34) phpCAS-1.3.5+ ****************** [CAS.php:468]
+CDC1 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+CDC1 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+CDC1 .|    |    Starting a new session ST-2529-brxVEZhPSguBgUzxxoyY-casinsa-toulousefr [Client.php:932]
+CDC1 .|    |    Session is authenticated as: mega [Client.php:936]
+CDC1 .|    <= ''
+CDC1 .<= ''
+CDC1 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+CDC1 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1646]
+CDC1 .<= ''
+CDC1 .=> phpCAS::forceAuthentication() [CAS.php:27]
+CDC1 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+CDC1 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+CDC1 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+CDC1 .|    |    |    |    user = `mega' [Client.php:1622]
+CDC1 .|    |    |    <= true
+CDC1 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+CDC1 .|    |    <= true
+CDC1 .|    |    no need to authenticate [Client.php:1282]
+CDC1 .|    <= true
+CDC1 .<= ''
+CDC1 .=> phpCAS::logout() [CAS.php:42]
+CDC1 .|    => CAS_Client::logout(array ()) [CAS.php:1452]
+CDC1 .|    |    Prepare redirect to : https://cas.insa-toulouse.fr/cas/logout [Client.php:1696]
+CDC1 .|    |    Destroying session : ST-2529-brxVEZhPSguBgUzxxoyY-casinsa-toulousefr [Client.php:1698]
+CDC1 .|    |    Session terminated [Client.php:1702]
+CDC1 .|    |    exit()
+CDC1 .|    |    -
+CDC1 .|    -
+9A2B .START (2018-04-26 16:57:46) phpCAS-1.3.5+ ****************** [CAS.php:468]
+9A2B .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+9A2B .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+9A2B .|    |    Starting a new session ST-2529-brxVEZhPSguBgUzxxoyY-casinsa-toulousefr [Client.php:932]
+9A2B .|    |    Session is not authenticated [Client.php:938]
+9A2B .|    <= ''
+9A2B .<= ''
+9A2B .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+9A2B .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+9A2B .<= ''
+9A2B .=> phpCAS::forceAuthentication() [CAS.php:27]
+9A2B .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+9A2B .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+9A2B .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+9A2B .|    |    |    |    no user found [Client.php:1635]
+9A2B .|    |    |    <= false
+9A2B .|    |    |    no ticket found [Client.php:1494]
+9A2B .|    |    <= false
+9A2B .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+9A2B .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+9A2B .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+9A2B .|    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+9A2B .|    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+9A2B .|    |    |    <= 'https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+9A2B .|    |    |    Redirect to : https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php [Client.php:1663]
+9A2B .|    |    |    exit()
+9A2B .|    |    |    -
+9A2B .|    |    -
+9A2B .|    -
+6272 .START (2018-04-26 16:57:47) phpCAS-1.3.5+ ****************** [CAS.php:468]
+6272 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+6272 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+6272 .|    |    Starting a new session ST-2529-brxVEZhPSguBgUzxxoyY-casinsa-toulousefr [Client.php:932]
+6272 .|    |    Session is not authenticated [Client.php:938]
+6272 .|    |    Ticket 'ST-2538-Ip3cdi23cNKfMcnSAsfa-cas.insa-toulouse.fr' found [Client.php:1020]
+6272 .|    <= ''
+6272 .<= ''
+6272 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+6272 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+6272 .<= ''
+6272 .=> phpCAS::forceAuthentication() [CAS.php:27]
+6272 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+6272 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+6272 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+6272 .|    |    |    |    no user found [Client.php:1635]
+6272 .|    |    |    <= false
+6272 .|    |    |    CAS 2.0 ticket `ST-2538-Ip3cdi23cNKfMcnSAsfa-cas.insa-toulouse.fr' is present [Client.php:1447]
+6272 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+6272 .|    |    |    |     [Client.php:3169]
+6272 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+6272 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+6272 .|    |    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+6272 .|    |    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+6272 .|    |    |    |    <= 'https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+6272 .|    |    |    |    => CAS_Client::_readURL('https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php&ticket=ST-2538-Ip3cdi23cNKfMcnSAsfa-cas.insa-toulouse.fr', NULL, NULL, NULL) [Client.php:3191]
+6272 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+6272 .|    |    |    |    |    |    Response Body: 
+6272 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+6272 .|    |    |    |    |    |    	<cas:authenticationSuccess>
+6272 .|    |    |    |    |    |    		<cas:user>mega</cas:user>
+6272 .|    |    |    |    |    |    
+6272 .|    |    |    |    |    |    
+6272 .|    |    |    |    |    |    	</cas:authenticationSuccess>
+6272 .|    |    |    |    |    |    </cas:serviceResponse>
+6272 .|    |    |    |    |    |     [CurlRequest.php:84]
+6272 .|    |    |    |    |    <= true
+6272 .|    |    |    |    <= true
+6272 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+6272 .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+6272 .|    |    |    |    <= ''
+6272 .|    |    |    |    Storing Proxy List [Client.php:3270]
+6272 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+6272 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+6272 .|    |    |    |    <= true
+6272 .|    |    |    |    => CAS_Client::_renameSession('ST-2538-Ip3cdi23cNKfMcnSAsfa-cas.insa-toulouse.fr') [Client.php:3293]
+6272 .|    |    |    |    |    Killing session: ST-2529-brxVEZhPSguBgUzxxoyY-casinsa-toulousefr [Client.php:3682]
+6272 .|    |    |    |    |    Starting session: ST-2538-Ip3cdi23cNKfMcnSAsfa-casinsa-toulousefr [Client.php:3686]
+6272 .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+6272 .|    |    |    |    <= ''
+6272 .|    |    |    <= true
+6272 .|    |    |    CAS 2.0 ticket `ST-2538-Ip3cdi23cNKfMcnSAsfa-cas.insa-toulouse.fr' was validated [Client.php:1453]
+6272 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+6272 .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+6272 .|    |    |    Prepare redirect to : http://localhost/projet_tutore/connect/test.php [Client.php:1518]
+6272 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+6272 .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+6272 .|    |    |    exit()
+6272 .|    |    |    -
+6272 .|    |    -
+6272 .|    -
+3B94 .START (2018-04-26 16:57:48) phpCAS-1.3.5+ ****************** [CAS.php:468]
+3B94 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+3B94 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+3B94 .|    |    Starting a new session ST-2538-Ip3cdi23cNKfMcnSAsfa-casinsa-toulousefr [Client.php:932]
+3B94 .|    |    Session is authenticated as: mega [Client.php:936]
+3B94 .|    <= ''
+3B94 .<= ''
+3B94 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+3B94 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+3B94 .<= ''
+3B94 .=> phpCAS::forceAuthentication() [CAS.php:27]
+3B94 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+3B94 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+3B94 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+3B94 .|    |    |    |    user = `mega' [Client.php:1622]
+3B94 .|    |    |    <= true
+3B94 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+3B94 .|    |    <= true
+3B94 .|    |    no need to authenticate [Client.php:1282]
+3B94 .|    <= true
+3B94 .<= ''
+28D5 .START (2018-04-26 16:57:52) phpCAS-1.3.5+ ****************** [CAS.php:468]
+28D5 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+28D5 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+28D5 .|    |    Starting a new session ST-2538-Ip3cdi23cNKfMcnSAsfa-casinsa-toulousefr [Client.php:932]
+28D5 .|    |    Session is authenticated as: mega [Client.php:936]
+28D5 .|    <= ''
+28D5 .<= ''
+28D5 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+28D5 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+28D5 .<= ''
+28D5 .=> phpCAS::forceAuthentication() [CAS.php:27]
+28D5 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+28D5 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+28D5 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+28D5 .|    |    |    |    user = `mega' [Client.php:1622]
+28D5 .|    |    |    <= true
+28D5 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+28D5 .|    |    <= true
+28D5 .|    |    no need to authenticate [Client.php:1282]
+28D5 .|    <= true
+28D5 .<= ''
+28D5 .=> phpCAS::logoutWithRedirectService('index.php') [CAS.php:42]
+28D5 .|    => CAS_Client::logout(array (  'service' => 'index.php',)) [CAS.php:1471]
+28D5 .|    |    Prepare redirect to : https://cas.insa-toulouse.fr/cas/logout?service=index.php [Client.php:1696]
+28D5 .|    |    Destroying session : ST-2538-Ip3cdi23cNKfMcnSAsfa-casinsa-toulousefr [Client.php:1698]
+28D5 .|    |    Session terminated [Client.php:1702]
+28D5 .|    |    exit()
+28D5 .|    |    -
+28D5 .|    -
+EBA4 .START (2018-04-26 16:58:14) phpCAS-1.3.5+ ****************** [CAS.php:468]
+EBA4 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+EBA4 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+EBA4 .|    |    Starting a new session ST-2538-Ip3cdi23cNKfMcnSAsfa-casinsa-toulousefr [Client.php:932]
+EBA4 .|    |    Session is not authenticated [Client.php:938]
+EBA4 .|    <= ''
+EBA4 .<= ''
+EBA4 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+EBA4 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+EBA4 .<= ''
+EBA4 .=> phpCAS::forceAuthentication() [CAS.php:27]
+EBA4 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+EBA4 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+EBA4 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+EBA4 .|    |    |    |    no user found [Client.php:1635]
+EBA4 .|    |    |    <= false
+EBA4 .|    |    |    no ticket found [Client.php:1494]
+EBA4 .|    |    <= false
+EBA4 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+EBA4 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+EBA4 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+EBA4 .|    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+EBA4 .|    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+EBA4 .|    |    |    <= 'https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+EBA4 .|    |    |    Redirect to : https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php [Client.php:1663]
+EBA4 .|    |    |    exit()
+EBA4 .|    |    |    -
+EBA4 .|    |    -
+EBA4 .|    -
+665D .START (2018-04-26 16:58:14) phpCAS-1.3.5+ ****************** [CAS.php:468]
+665D .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+665D .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+665D .|    |    Starting a new session ST-2538-Ip3cdi23cNKfMcnSAsfa-casinsa-toulousefr [Client.php:932]
+665D .|    |    Session is not authenticated [Client.php:938]
+665D .|    |    Ticket 'ST-2546-4PeDBcqR4y6ZBGeG0jrx-cas.insa-toulouse.fr' found [Client.php:1020]
+665D .|    <= ''
+665D .<= ''
+665D .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+665D .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+665D .<= ''
+665D .=> phpCAS::forceAuthentication() [CAS.php:27]
+665D .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+665D .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+665D .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+665D .|    |    |    |    no user found [Client.php:1635]
+665D .|    |    |    <= false
+665D .|    |    |    CAS 2.0 ticket `ST-2546-4PeDBcqR4y6ZBGeG0jrx-cas.insa-toulouse.fr' is present [Client.php:1447]
+665D .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+665D .|    |    |    |     [Client.php:3169]
+665D .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+665D .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+665D .|    |    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+665D .|    |    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+665D .|    |    |    |    <= 'https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+665D .|    |    |    |    => CAS_Client::_readURL('https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php&ticket=ST-2546-4PeDBcqR4y6ZBGeG0jrx-cas.insa-toulouse.fr', NULL, NULL, NULL) [Client.php:3191]
+665D .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+665D .|    |    |    |    |    |    Response Body: 
+665D .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+665D .|    |    |    |    |    |    	<cas:authenticationSuccess>
+665D .|    |    |    |    |    |    		<cas:user>mega</cas:user>
+665D .|    |    |    |    |    |    
+665D .|    |    |    |    |    |    
+665D .|    |    |    |    |    |    	</cas:authenticationSuccess>
+665D .|    |    |    |    |    |    </cas:serviceResponse>
+665D .|    |    |    |    |    |     [CurlRequest.php:84]
+665D .|    |    |    |    |    <= true
+665D .|    |    |    |    <= true
+665D .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+665D .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+665D .|    |    |    |    <= ''
+665D .|    |    |    |    Storing Proxy List [Client.php:3270]
+665D .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+665D .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+665D .|    |    |    |    <= true
+665D .|    |    |    |    => CAS_Client::_renameSession('ST-2546-4PeDBcqR4y6ZBGeG0jrx-cas.insa-toulouse.fr') [Client.php:3293]
+665D .|    |    |    |    |    Killing session: ST-2538-Ip3cdi23cNKfMcnSAsfa-casinsa-toulousefr [Client.php:3682]
+665D .|    |    |    |    |    Starting session: ST-2546-4PeDBcqR4y6ZBGeG0jrx-casinsa-toulousefr [Client.php:3686]
+665D .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+665D .|    |    |    |    <= ''
+665D .|    |    |    <= true
+665D .|    |    |    CAS 2.0 ticket `ST-2546-4PeDBcqR4y6ZBGeG0jrx-cas.insa-toulouse.fr' was validated [Client.php:1453]
+665D .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+665D .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+665D .|    |    |    Prepare redirect to : http://localhost/projet_tutore/connect/test.php [Client.php:1518]
+665D .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+665D .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+665D .|    |    |    exit()
+665D .|    |    |    -
+665D .|    |    -
+665D .|    -
+8F17 .START (2018-04-26 16:58:14) phpCAS-1.3.5+ ****************** [CAS.php:468]
+8F17 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+8F17 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+8F17 .|    |    Starting a new session ST-2546-4PeDBcqR4y6ZBGeG0jrx-casinsa-toulousefr [Client.php:932]
+8F17 .|    |    Session is authenticated as: mega [Client.php:936]
+8F17 .|    <= ''
+8F17 .<= ''
+8F17 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+8F17 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+8F17 .<= ''
+8F17 .=> phpCAS::forceAuthentication() [CAS.php:27]
+8F17 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+8F17 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+8F17 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+8F17 .|    |    |    |    user = `mega' [Client.php:1622]
+8F17 .|    |    |    <= true
+8F17 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+8F17 .|    |    <= true
+8F17 .|    |    no need to authenticate [Client.php:1282]
+8F17 .|    <= true
+8F17 .<= ''
+2B2C .START (2018-04-26 16:58:15) phpCAS-1.3.5+ ****************** [CAS.php:468]
+2B2C .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+2B2C .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+FB2B .START (2018-04-26 16:58:15) phpCAS-1.3.5+ ****************** [CAS.php:468]
+FB2B .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+FB2B .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+2B2C .|    |    Starting a new session ST-2546-4PeDBcqR4y6ZBGeG0jrx-casinsa-toulousefr [Client.php:932]
+2B2C .|    |    Session is authenticated as: mega [Client.php:936]
+2B2C .|    |    Ticket 'ST-2547-tuMeHldicGFUde5Hgfnt-cas.insa-toulouse.fr' found [Client.php:1020]
+2B2C .|    <= ''
+2B2C .<= ''
+2B2C .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+2B2C .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+2B2C .<= ''
+2B2C .=> phpCAS::forceAuthentication() [CAS.php:27]
+2B2C .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+2B2C .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+2B2C .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+2B2C .|    |    |    |    user = `mega' [Client.php:1622]
+2B2C .|    |    |    <= true
+2B2C .|    |    |    ticket was present and will be discarded, use renewAuthenticate() [Client.php:1398]
+2B2C .|    |    |    => CAS_Client::getURL() [Client.php:1400]
+2B2C .|    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+2B2C .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+2B2C .|    |    |    Prepare redirect to : http://localhost/projet_tutore/connect/test.php [Client.php:1400]
+2B2C .|    |    |    => CAS_Client::getURL() [Client.php:1402]
+FB2B .|    |    Starting a new session ST-2546-4PeDBcqR4y6ZBGeG0jrx-casinsa-toulousefr [Client.php:932]
+FB2B .|    |    Session is authenticated as: mega [Client.php:936]
+t.php'
+FB2B .|    |    Ticket 'ST-2548-uebhbtXhJtsIOugvfGhY-cas.insa-toulouse.fr' found [Client.php:1020]
+2B2C .|    |    |    -
+FB2B .|    <= ''
+2B2C .|    |    -
+FB2B .<= ''
+2B2C .|    -
+AS::setNoCasServerValidation() [CAS.php:24]
+FB2B .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+FB2B .<= ''
+FB2B .=> phpCAS::forceAuthentication() [CAS.php:27]
+FB2B .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+FB2B .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+FB2B .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+FB2B .|    |    |    |    user = `mega' [Client.php:1622]
+FB2B .|    |    |    <= true
+FB2B .|    |    |    ticket was present and will be discarded, use renewAuthenticate() [Client.php:1398]
+FB2B .|    |    |    => CAS_Client::getURL() [Client.php:1400]
+FB2B .|    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+FB2B .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+FB2B .|    |    |    Prepare redirect to : http://localhost/projet_tutore/connect/test.php [Client.php:1400]
+FB2B .|    |    |    => CAS_Client::getURL() [Client.php:1402]
+FB2B .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+FB2B .|    |    |    exit()
+FB2B .|    |    |    -
+FB2B .|    |    -
+FB2B .|    -
+7BFA .START (2018-04-26 16:58:17) phpCAS-1.3.5+ ****************** [CAS.php:468]
+7BFA .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+7BFA .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+7BFA .|    |    Starting a new session ST-2546-4PeDBcqR4y6ZBGeG0jrx-casinsa-toulousefr [Client.php:932]
+7BFA .|    |    Session is authenticated as: mega [Client.php:936]
+7BFA .|    <= ''
+7BFA .<= ''
+7BFA .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+7BFA .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+7BFA .<= ''
+7BFA .=> phpCAS::forceAuthentication() [CAS.php:27]
+7BFA .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+7BFA .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+7BFA .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+7BFA .|    |    |    |    user = `mega' [Client.php:1622]
+7BFA .|    |    |    <= true
+7BFA .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+7BFA .|    |    <= true
+7BFA .|    |    no need to authenticate [Client.php:1282]
+7BFA .|    <= true
+7BFA .<= ''
+DFB3 .START (2018-04-26 16:58:25) phpCAS-1.3.5+ ****************** [CAS.php:468]
+DFB3 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+DFB3 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+DFB3 .|    |    Starting a new session ST-2546-4PeDBcqR4y6ZBGeG0jrx-casinsa-toulousefr [Client.php:932]
+DFB3 .|    |    Session is authenticated as: mega [Client.php:936]
+DFB3 .|    <= ''
+DFB3 .<= ''
+DFB3 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+DFB3 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+DFB3 .<= ''
+DFB3 .=> phpCAS::forceAuthentication() [CAS.php:27]
+DFB3 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+DFB3 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+DFB3 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+DFB3 .|    |    |    |    user = `mega' [Client.php:1622]
+DFB3 .|    |    |    <= true
+DFB3 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+DFB3 .|    |    <= true
+DFB3 .|    |    no need to authenticate [Client.php:1282]
+DFB3 .|    <= true
+DFB3 .<= ''
+AF3A .START (2018-04-26 16:58:30) phpCAS-1.3.5+ ****************** [CAS.php:468]
+AF3A .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+AF3A .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+AF3A .|    |    Starting a new session ST-2546-4PeDBcqR4y6ZBGeG0jrx-casinsa-toulousefr [Client.php:932]
+AF3A .|    |    Session is authenticated as: mega [Client.php:936]
+AF3A .|    <= ''
+AF3A .<= ''
+AF3A .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+AF3A .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+AF3A .<= ''
+AF3A .=> phpCAS::forceAuthentication() [CAS.php:27]
+AF3A .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+AF3A .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+AF3A .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+AF3A .|    |    |    |    user = `mega' [Client.php:1622]
+AF3A .|    |    |    <= true
+AF3A .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+AF3A .|    |    <= true
+AF3A .|    |    no need to authenticate [Client.php:1282]
+AF3A .|    <= true
+AF3A .<= ''
+AF3A .=> phpCAS::logoutWithRedirectService('index.php') [CAS.php:42]
+AF3A .|    => CAS_Client::logout(array (  'service' => 'index.php',)) [CAS.php:1471]
+AF3A .|    |    Prepare redirect to : https://cas.insa-toulouse.fr/cas/logout?service=index.php [Client.php:1696]
+AF3A .|    |    Destroying session : ST-2546-4PeDBcqR4y6ZBGeG0jrx-casinsa-toulousefr [Client.php:1698]
+AF3A .|    |    Session terminated [Client.php:1702]
+AF3A .|    |    exit()
+AF3A .|    |    -
+AF3A .|    -
+934E .START (2018-04-26 16:58:52) phpCAS-1.3.5+ ****************** [CAS.php:468]
+934E .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+934E .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+934E .|    |    Starting a new session ST-2546-4PeDBcqR4y6ZBGeG0jrx-casinsa-toulousefr [Client.php:932]
+934E .|    |    Session is not authenticated [Client.php:938]
+934E .|    <= ''
+934E .<= ''
+934E .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+934E .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+934E .<= ''
+934E .=> phpCAS::forceAuthentication() [CAS.php:27]
+934E .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+934E .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+934E .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+934E .|    |    |    |    no user found [Client.php:1635]
+934E .|    |    |    <= false
+934E .|    |    |    no ticket found [Client.php:1494]
+934E .|    |    <= false
+934E .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+934E .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+934E .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+934E .|    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+934E .|    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+934E .|    |    |    <= 'https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+934E .|    |    |    Redirect to : https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php [Client.php:1663]
+934E .|    |    |    exit()
+934E .|    |    |    -
+934E .|    |    -
+934E .|    -
+603A .START (2018-04-26 16:58:54) phpCAS-1.3.5+ ****************** [CAS.php:468]
+603A .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+603A .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+603A .|    |    Starting a new session ST-2546-4PeDBcqR4y6ZBGeG0jrx-casinsa-toulousefr [Client.php:932]
+603A .|    |    Session is not authenticated [Client.php:938]
+603A .|    |    Ticket 'ST-2552-qIWETxC5ic6acbMLAlXL-cas.insa-toulouse.fr' found [Client.php:1020]
+603A .|    <= ''
+603A .<= ''
+603A .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+603A .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+603A .<= ''
+603A .=> phpCAS::forceAuthentication() [CAS.php:27]
+603A .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+603A .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+603A .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+603A .|    |    |    |    no user found [Client.php:1635]
+603A .|    |    |    <= false
+603A .|    |    |    CAS 2.0 ticket `ST-2552-qIWETxC5ic6acbMLAlXL-cas.insa-toulouse.fr' is present [Client.php:1447]
+603A .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+603A .|    |    |    |     [Client.php:3169]
+603A .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+603A .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+603A .|    |    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+603A .|    |    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+603A .|    |    |    |    <= 'https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+603A .|    |    |    |    => CAS_Client::_readURL('https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php&ticket=ST-2552-qIWETxC5ic6acbMLAlXL-cas.insa-toulouse.fr', NULL, NULL, NULL) [Client.php:3191]
+603A .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+603A .|    |    |    |    |    |    Response Body: 
+603A .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+603A .|    |    |    |    |    |    	<cas:authenticationSuccess>
+603A .|    |    |    |    |    |    		<cas:user>mega</cas:user>
+603A .|    |    |    |    |    |    
+603A .|    |    |    |    |    |    
+603A .|    |    |    |    |    |    	</cas:authenticationSuccess>
+603A .|    |    |    |    |    |    </cas:serviceResponse>
+603A .|    |    |    |    |    |     [CurlRequest.php:84]
+603A .|    |    |    |    |    <= true
+603A .|    |    |    |    <= true
+603A .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+603A .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+603A .|    |    |    |    <= ''
+603A .|    |    |    |    Storing Proxy List [Client.php:3270]
+603A .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+603A .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+603A .|    |    |    |    <= true
+603A .|    |    |    |    => CAS_Client::_renameSession('ST-2552-qIWETxC5ic6acbMLAlXL-cas.insa-toulouse.fr') [Client.php:3293]
+603A .|    |    |    |    |    Killing session: ST-2546-4PeDBcqR4y6ZBGeG0jrx-casinsa-toulousefr [Client.php:3682]
+603A .|    |    |    |    |    Starting session: ST-2552-qIWETxC5ic6acbMLAlXL-casinsa-toulousefr [Client.php:3686]
+603A .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+603A .|    |    |    |    <= ''
+603A .|    |    |    <= true
+603A .|    |    |    CAS 2.0 ticket `ST-2552-qIWETxC5ic6acbMLAlXL-cas.insa-toulouse.fr' was validated [Client.php:1453]
+603A .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+603A .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+603A .|    |    |    Prepare redirect to : http://localhost/projet_tutore/connect/test.php [Client.php:1518]
+603A .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+603A .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+603A .|    |    |    exit()
+603A .|    |    |    -
+603A .|    |    -
+603A .|    -
+D3E3 .START (2018-04-26 16:58:55) phpCAS-1.3.5+ ****************** [CAS.php:468]
+D3E3 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+D3E3 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+D3E3 .|    |    Starting a new session ST-2552-qIWETxC5ic6acbMLAlXL-casinsa-toulousefr [Client.php:932]
+D3E3 .|    |    Session is authenticated as: mega [Client.php:936]
+D3E3 .|    <= ''
+D3E3 .<= ''
+D3E3 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+D3E3 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+D3E3 .<= ''
+D3E3 .=> phpCAS::forceAuthentication() [CAS.php:27]
+D3E3 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+D3E3 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+D3E3 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+D3E3 .|    |    |    |    user = `mega' [Client.php:1622]
+D3E3 .|    |    |    <= true
+D3E3 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+D3E3 .|    |    <= true
+D3E3 .|    |    no need to authenticate [Client.php:1282]
+D3E3 .|    <= true
+D3E3 .<= ''
+74B9 .START (2018-04-26 16:58:58) phpCAS-1.3.5+ ****************** [CAS.php:468]
+74B9 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+74B9 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+74B9 .|    |    Starting a new session ST-2552-qIWETxC5ic6acbMLAlXL-casinsa-toulousefr [Client.php:932]
+74B9 .|    |    Session is authenticated as: mega [Client.php:936]
+74B9 .|    <= ''
+74B9 .<= ''
+74B9 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+74B9 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+74B9 .<= ''
+74B9 .=> phpCAS::forceAuthentication() [CAS.php:27]
+74B9 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+74B9 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+74B9 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+74B9 .|    |    |    |    user = `mega' [Client.php:1622]
+74B9 .|    |    |    <= true
+74B9 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+74B9 .|    |    <= true
+74B9 .|    |    no need to authenticate [Client.php:1282]
+74B9 .|    <= true
+74B9 .<= ''
+74B9 .=> phpCAS::logoutWithRedirectService('http://www.google.fr') [CAS.php:42]
+74B9 .|    => CAS_Client::logout(array (  'service' => 'http://www.google.fr',)) [CAS.php:1471]
+74B9 .|    |    Prepare redirect to : https://cas.insa-toulouse.fr/cas/logout?service=http%3A%2F%2Fwww.google.fr [Client.php:1696]
+74B9 .|    |    Destroying session : ST-2552-qIWETxC5ic6acbMLAlXL-casinsa-toulousefr [Client.php:1698]
+74B9 .|    |    Session terminated [Client.php:1702]
+74B9 .|    |    exit()
+74B9 .|    |    -
+74B9 .|    -
+5D36 .START (2018-04-26 17:00:42) phpCAS-1.3.5+ ****************** [CAS.php:468]
+5D36 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+5D36 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+5D36 .|    |    Starting a new session ST-2552-qIWETxC5ic6acbMLAlXL-casinsa-toulousefr [Client.php:932]
+5D36 .|    |    Session is not authenticated [Client.php:938]
+5D36 .|    <= ''
+5D36 .<= ''
+5D36 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+5D36 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+5D36 .<= ''
+5D36 .=> phpCAS::forceAuthentication() [CAS.php:27]
+5D36 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+5D36 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+5D36 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+5D36 .|    |    |    |    no user found [Client.php:1635]
+5D36 .|    |    |    <= false
+5D36 .|    |    |    no ticket found [Client.php:1494]
+5D36 .|    |    <= false
+5D36 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+5D36 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+5D36 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+5D36 .|    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+5D36 .|    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+5D36 .|    |    |    <= 'https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+5D36 .|    |    |    Redirect to : https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php [Client.php:1663]
+5D36 .|    |    |    exit()
+5D36 .|    |    |    -
+5D36 .|    |    -
+5D36 .|    -
+C988 .START (2018-04-26 17:00:45) phpCAS-1.3.5+ ****************** [CAS.php:468]
+C988 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+C988 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+C988 .|    |    Starting a new session ST-2552-qIWETxC5ic6acbMLAlXL-casinsa-toulousefr [Client.php:932]
+C988 .|    |    Session is not authenticated [Client.php:938]
+C988 .|    |    Ticket 'ST-2559-0DaPHb53JsCBYMEcWNfF-cas.insa-toulouse.fr' found [Client.php:1020]
+C988 .|    <= ''
+C988 .<= ''
+C988 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+C988 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+C988 .<= ''
+C988 .=> phpCAS::forceAuthentication() [CAS.php:27]
+C988 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+C988 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+C988 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+C988 .|    |    |    |    no user found [Client.php:1635]
+C988 .|    |    |    <= false
+C988 .|    |    |    CAS 2.0 ticket `ST-2559-0DaPHb53JsCBYMEcWNfF-cas.insa-toulouse.fr' is present [Client.php:1447]
+C988 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+C988 .|    |    |    |     [Client.php:3169]
+C988 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+C988 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+C988 .|    |    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+C988 .|    |    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+C988 .|    |    |    |    <= 'https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+C988 .|    |    |    |    => CAS_Client::_readURL('https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php&ticket=ST-2559-0DaPHb53JsCBYMEcWNfF-cas.insa-toulouse.fr', NULL, NULL, NULL) [Client.php:3191]
+C988 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+C988 .|    |    |    |    |    |    Response Body: 
+C988 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+C988 .|    |    |    |    |    |    	<cas:authenticationSuccess>
+C988 .|    |    |    |    |    |    		<cas:user>mega</cas:user>
+C988 .|    |    |    |    |    |    
+C988 .|    |    |    |    |    |    
+C988 .|    |    |    |    |    |    	</cas:authenticationSuccess>
+C988 .|    |    |    |    |    |    </cas:serviceResponse>
+C988 .|    |    |    |    |    |     [CurlRequest.php:84]
+C988 .|    |    |    |    |    <= true
+C988 .|    |    |    |    <= true
+C988 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+C988 .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+C988 .|    |    |    |    <= ''
+C988 .|    |    |    |    Storing Proxy List [Client.php:3270]
+C988 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+C988 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+C988 .|    |    |    |    <= true
+C988 .|    |    |    |    => CAS_Client::_renameSession('ST-2559-0DaPHb53JsCBYMEcWNfF-cas.insa-toulouse.fr') [Client.php:3293]
+C988 .|    |    |    |    |    Killing session: ST-2552-qIWETxC5ic6acbMLAlXL-casinsa-toulousefr [Client.php:3682]
+C988 .|    |    |    |    |    Starting session: ST-2559-0DaPHb53JsCBYMEcWNfF-casinsa-toulousefr [Client.php:3686]
+C988 .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+C988 .|    |    |    |    <= ''
+C988 .|    |    |    <= true
+C988 .|    |    |    CAS 2.0 ticket `ST-2559-0DaPHb53JsCBYMEcWNfF-cas.insa-toulouse.fr' was validated [Client.php:1453]
+C988 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+C988 .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+C988 .|    |    |    Prepare redirect to : http://localhost/projet_tutore/connect/test.php [Client.php:1518]
+C988 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+C988 .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+C988 .|    |    |    exit()
+C988 .|    |    |    -
+C988 .|    |    -
+C988 .|    -
+9EA9 .START (2018-04-26 17:00:46) phpCAS-1.3.5+ ****************** [CAS.php:468]
+9EA9 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+9EA9 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+9EA9 .|    |    Starting a new session ST-2559-0DaPHb53JsCBYMEcWNfF-casinsa-toulousefr [Client.php:932]
+9EA9 .|    |    Session is authenticated as: mega [Client.php:936]
+9EA9 .|    <= ''
+9EA9 .<= ''
+9EA9 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+9EA9 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+9EA9 .<= ''
+9EA9 .=> phpCAS::forceAuthentication() [CAS.php:27]
+9EA9 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+9EA9 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+9EA9 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+9EA9 .|    |    |    |    user = `mega' [Client.php:1622]
+9EA9 .|    |    |    <= true
+9EA9 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+9EA9 .|    |    <= true
+9EA9 .|    |    no need to authenticate [Client.php:1282]
+9EA9 .|    <= true
+9EA9 .<= ''
+035F .START (2018-04-26 17:00:50) phpCAS-1.3.5+ ****************** [CAS.php:468]
+035F .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+035F .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+035F .|    |    Starting a new session ST-2559-0DaPHb53JsCBYMEcWNfF-casinsa-toulousefr [Client.php:932]
+035F .|    |    Session is authenticated as: mega [Client.php:936]
+035F .|    <= ''
+035F .<= ''
+035F .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+035F .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+035F .<= ''
+035F .=> phpCAS::forceAuthentication() [CAS.php:27]
+035F .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+035F .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+035F .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+035F .|    |    |    |    user = `mega' [Client.php:1622]
+035F .|    |    |    <= true
+035F .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+035F .|    |    <= true
+035F .|    |    no need to authenticate [Client.php:1282]
+035F .|    <= true
+035F .<= ''
+035F .=> phpCAS::logoutWithUrl('http://www.google.fr') [CAS.php:42]
+035F .|    => CAS_Client::logout(array (  'url' => 'http://www.google.fr',)) [CAS.php:1496]
+035F .|    |    Prepare redirect to : https://cas.insa-toulouse.fr/cas/logout?url=http%3A%2F%2Fwww.google.fr [Client.php:1696]
+035F .|    |    Destroying session : ST-2559-0DaPHb53JsCBYMEcWNfF-casinsa-toulousefr [Client.php:1698]
+035F .|    |    Session terminated [Client.php:1702]
+035F .|    |    exit()
+035F .|    |    -
+035F .|    -
+D46C .START (2018-04-26 17:01:02) phpCAS-1.3.5+ ****************** [CAS.php:468]
+D46C .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+D46C .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+D46C .|    |    Starting a new session ST-2559-0DaPHb53JsCBYMEcWNfF-casinsa-toulousefr [Client.php:932]
+D46C .|    |    Session is not authenticated [Client.php:938]
+D46C .|    <= ''
+D46C .<= ''
+D46C .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+D46C .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+D46C .<= ''
+D46C .=> phpCAS::forceAuthentication() [CAS.php:27]
+D46C .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+D46C .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+D46C .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+D46C .|    |    |    |    no user found [Client.php:1635]
+D46C .|    |    |    <= false
+D46C .|    |    |    no ticket found [Client.php:1494]
+D46C .|    |    <= false
+D46C .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+D46C .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+D46C .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+D46C .|    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+D46C .|    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+D46C .|    |    |    <= 'https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+D46C .|    |    |    Redirect to : https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php [Client.php:1663]
+D46C .|    |    |    exit()
+D46C .|    |    |    -
+D46C .|    |    -
+D46C .|    -
+5F89 .START (2018-04-26 17:01:04) phpCAS-1.3.5+ ****************** [CAS.php:468]
+5F89 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+5F89 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+5F89 .|    |    Starting a new session ST-2559-0DaPHb53JsCBYMEcWNfF-casinsa-toulousefr [Client.php:932]
+5F89 .|    |    Session is not authenticated [Client.php:938]
+5F89 .|    |    Ticket 'ST-2564-WBmmiTbSAlfSVgQKgV60-cas.insa-toulouse.fr' found [Client.php:1020]
+5F89 .|    <= ''
+5F89 .<= ''
+5F89 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+5F89 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+5F89 .<= ''
+5F89 .=> phpCAS::forceAuthentication() [CAS.php:27]
+5F89 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+5F89 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+5F89 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+5F89 .|    |    |    |    no user found [Client.php:1635]
+5F89 .|    |    |    <= false
+5F89 .|    |    |    CAS 2.0 ticket `ST-2564-WBmmiTbSAlfSVgQKgV60-cas.insa-toulouse.fr' is present [Client.php:1447]
+5F89 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+5F89 .|    |    |    |     [Client.php:3169]
+5F89 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+5F89 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+5F89 .|    |    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+5F89 .|    |    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+5F89 .|    |    |    |    <= 'https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+5F89 .|    |    |    |    => CAS_Client::_readURL('https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php&ticket=ST-2564-WBmmiTbSAlfSVgQKgV60-cas.insa-toulouse.fr', NULL, NULL, NULL) [Client.php:3191]
+5F89 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+5F89 .|    |    |    |    |    |    Response Body: 
+5F89 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+5F89 .|    |    |    |    |    |    	<cas:authenticationSuccess>
+5F89 .|    |    |    |    |    |    		<cas:user>mega</cas:user>
+5F89 .|    |    |    |    |    |    
+5F89 .|    |    |    |    |    |    
+5F89 .|    |    |    |    |    |    	</cas:authenticationSuccess>
+5F89 .|    |    |    |    |    |    </cas:serviceResponse>
+5F89 .|    |    |    |    |    |     [CurlRequest.php:84]
+5F89 .|    |    |    |    |    <= true
+5F89 .|    |    |    |    <= true
+5F89 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+5F89 .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+5F89 .|    |    |    |    <= ''
+5F89 .|    |    |    |    Storing Proxy List [Client.php:3270]
+5F89 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+5F89 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+5F89 .|    |    |    |    <= true
+5F89 .|    |    |    |    => CAS_Client::_renameSession('ST-2564-WBmmiTbSAlfSVgQKgV60-cas.insa-toulouse.fr') [Client.php:3293]
+5F89 .|    |    |    |    |    Killing session: ST-2559-0DaPHb53JsCBYMEcWNfF-casinsa-toulousefr [Client.php:3682]
+5F89 .|    |    |    |    |    Starting session: ST-2564-WBmmiTbSAlfSVgQKgV60-casinsa-toulousefr [Client.php:3686]
+5F89 .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+5F89 .|    |    |    |    <= ''
+5F89 .|    |    |    <= true
+5F89 .|    |    |    CAS 2.0 ticket `ST-2564-WBmmiTbSAlfSVgQKgV60-cas.insa-toulouse.fr' was validated [Client.php:1453]
+5F89 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+5F89 .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+5F89 .|    |    |    Prepare redirect to : http://localhost/projet_tutore/connect/test.php [Client.php:1518]
+5F89 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+5F89 .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+5F89 .|    |    |    exit()
+5F89 .|    |    |    -
+5F89 .|    |    -
+5F89 .|    -
+FAD5 .START (2018-04-26 17:01:04) phpCAS-1.3.5+ ****************** [CAS.php:468]
+FAD5 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+FAD5 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+FAD5 .|    |    Starting a new session ST-2564-WBmmiTbSAlfSVgQKgV60-casinsa-toulousefr [Client.php:932]
+FAD5 .|    |    Session is authenticated as: mega [Client.php:936]
+FAD5 .|    <= ''
+FAD5 .<= ''
+FAD5 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+FAD5 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+FAD5 .<= ''
+FAD5 .=> phpCAS::forceAuthentication() [CAS.php:27]
+FAD5 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+FAD5 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+FAD5 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+FAD5 .|    |    |    |    user = `mega' [Client.php:1622]
+FAD5 .|    |    |    <= true
+FAD5 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+FAD5 .|    |    <= true
+FAD5 .|    |    no need to authenticate [Client.php:1282]
+FAD5 .|    <= true
+FAD5 .<= ''
+4983 .START (2018-04-26 17:01:09) phpCAS-1.3.5+ ****************** [CAS.php:468]
+4983 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+4983 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+4983 .|    |    Starting a new session ST-2564-WBmmiTbSAlfSVgQKgV60-casinsa-toulousefr [Client.php:932]
+4983 .|    |    Session is authenticated as: mega [Client.php:936]
+4983 .|    <= ''
+4983 .<= ''
+4983 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+4983 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+4983 .<= ''
+4983 .=> phpCAS::forceAuthentication() [CAS.php:27]
+4983 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+4983 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+4983 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+4983 .|    |    |    |    user = `mega' [Client.php:1622]
+4983 .|    |    |    <= true
+4983 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+4983 .|    |    <= true
+4983 .|    |    no need to authenticate [Client.php:1282]
+4983 .|    <= true
+4983 .<= ''
+4983 .=> phpCAS::logoutWithRedirectService('http://www.google.fr') [CAS.php:42]
+4983 .|    => CAS_Client::logout(array (  'service' => 'http://www.google.fr',)) [CAS.php:1471]
+4983 .|    |    Prepare redirect to : https://cas.insa-toulouse.fr/cas/logout?service=http%3A%2F%2Fwww.google.fr [Client.php:1696]
+4983 .|    |    Destroying session : ST-2564-WBmmiTbSAlfSVgQKgV60-casinsa-toulousefr [Client.php:1698]
+4983 .|    |    Session terminated [Client.php:1702]
+4983 .|    |    exit()
+4983 .|    |    -
+4983 .|    -
+1DE7 .START (2018-04-26 17:03:11) phpCAS-1.3.5+ ****************** [CAS.php:468]
+1DE7 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+1DE7 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+1DE7 .|    |    Starting a new session ST-2564-WBmmiTbSAlfSVgQKgV60-casinsa-toulousefr [Client.php:932]
+1DE7 .|    |    Session is not authenticated [Client.php:938]
+1DE7 .|    <= ''
+1DE7 .<= ''
+1DE7 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+1DE7 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+1DE7 .<= ''
+1DE7 .=> phpCAS::forceAuthentication() [CAS.php:27]
+1DE7 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+1DE7 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+1DE7 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+1DE7 .|    |    |    |    no user found [Client.php:1635]
+1DE7 .|    |    |    <= false
+1DE7 .|    |    |    no ticket found [Client.php:1494]
+1DE7 .|    |    <= false
+1DE7 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+1DE7 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+1DE7 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+1DE7 .|    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+1DE7 .|    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+1DE7 .|    |    |    <= 'https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+1DE7 .|    |    |    Redirect to : https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php [Client.php:1663]
+1DE7 .|    |    |    exit()
+1DE7 .|    |    |    -
+1DE7 .|    |    -
+1DE7 .|    -
+F47B .START (2018-04-26 17:05:42) phpCAS-1.3.5+ ****************** [CAS.php:468]
+F47B .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+F47B .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+F47B .|    |    Starting a new session ST-2564-WBmmiTbSAlfSVgQKgV60-casinsa-toulousefr [Client.php:932]
+F47B .|    |    Session is not authenticated [Client.php:938]
+F47B .|    <= ''
+F47B .<= ''
+F47B .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+F47B .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+F47B .<= ''
+F47B .=> phpCAS::forceAuthentication() [CAS.php:27]
+F47B .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+F47B .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+F47B .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+F47B .|    |    |    |    no user found [Client.php:1635]
+F47B .|    |    |    <= false
+F47B .|    |    |    no ticket found [Client.php:1494]
+F47B .|    |    <= false
+F47B .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+F47B .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+F47B .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+F47B .|    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+F47B .|    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+F47B .|    |    |    <= 'https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+F47B .|    |    |    Redirect to : https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php [Client.php:1663]
+F47B .|    |    |    exit()
+F47B .|    |    |    -
+F47B .|    |    -
+F47B .|    -
+9D00 .START (2018-04-26 17:06:06) phpCAS-1.3.5+ ****************** [CAS.php:468]
+9D00 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+9D00 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+9D00 .|    |    Starting a new session ST-2564-WBmmiTbSAlfSVgQKgV60-casinsa-toulousefr [Client.php:932]
+9D00 .|    |    Session is not authenticated [Client.php:938]
+9D00 .|    <= ''
+9D00 .<= ''
+9D00 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+9D00 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+9D00 .<= ''
+9D00 .=> phpCAS::forceAuthentication() [CAS.php:27]
+9D00 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+9D00 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+9D00 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+9D00 .|    |    |    |    no user found [Client.php:1635]
+9D00 .|    |    |    <= false
+9D00 .|    |    |    no ticket found [Client.php:1494]
+9D00 .|    |    <= false
+9D00 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+9D00 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+9D00 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+9D00 .|    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+9D00 .|    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+9D00 .|    |    |    <= 'https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+9D00 .|    |    |    Redirect to : https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php [Client.php:1663]
+9D00 .|    |    |    exit()
+9D00 .|    |    |    -
+9D00 .|    |    -
+9D00 .|    -
+5F48 .START (2018-04-26 17:06:38) phpCAS-1.3.5+ ****************** [CAS.php:468]
+5F48 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+5F48 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+5F48 .|    |    Starting a new session ST-2564-WBmmiTbSAlfSVgQKgV60-casinsa-toulousefr [Client.php:932]
+5F48 .|    |    Session is not authenticated [Client.php:938]
+5F48 .|    <= ''
+5F48 .<= ''
+5F48 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+5F48 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+5F48 .<= ''
+5F48 .=> phpCAS::forceAuthentication() [CAS.php:27]
+5F48 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+5F48 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+5F48 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+5F48 .|    |    |    |    no user found [Client.php:1635]
+5F48 .|    |    |    <= false
+5F48 .|    |    |    no ticket found [Client.php:1494]
+5F48 .|    |    <= false
+5F48 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+5F48 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+5F48 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+5F48 .|    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+5F48 .|    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+5F48 .|    |    |    <= 'https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+5F48 .|    |    |    Redirect to : https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php [Client.php:1663]
+5F48 .|    |    |    exit()
+5F48 .|    |    |    -
+5F48 .|    |    -
+5F48 .|    -
+DC25 .START (2018-04-26 17:11:39) phpCAS-1.3.5+ ****************** [CAS.php:468]
+DC25 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+DC25 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+DC25 .|    |    Starting a new session ST-2564-WBmmiTbSAlfSVgQKgV60-casinsa-toulousefr [Client.php:932]
+DC25 .|    |    Session is not authenticated [Client.php:938]
+DC25 .|    <= ''
+DC25 .<= ''
+DC25 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+DC25 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+DC25 .<= ''
+DC25 .=> phpCAS::forceAuthentication() [CAS.php:27]
+DC25 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+DC25 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+DC25 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+DC25 .|    |    |    |    no user found [Client.php:1635]
+DC25 .|    |    |    <= false
+DC25 .|    |    |    no ticket found [Client.php:1494]
+DC25 .|    |    <= false
+DC25 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+DC25 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+DC25 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+DC25 .|    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+DC25 .|    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+DC25 .|    |    |    <= 'https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+DC25 .|    |    |    Redirect to : https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php [Client.php:1663]
+DC25 .|    |    |    exit()
+DC25 .|    |    |    -
+DC25 .|    |    -
+DC25 .|    -
+FCC0 .START (2018-04-26 17:12:06) phpCAS-1.3.5+ ****************** [CAS.php:468]
+FCC0 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+FCC0 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+FCC0 .|    |    Starting a new session ST-2564-WBmmiTbSAlfSVgQKgV60-casinsa-toulousefr [Client.php:932]
+FCC0 .|    |    Session is not authenticated [Client.php:938]
+FCC0 .|    <= ''
+FCC0 .<= ''
+FCC0 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+FCC0 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+FCC0 .<= ''
+FCC0 .=> phpCAS::forceAuthentication() [CAS.php:27]
+FCC0 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+FCC0 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+FCC0 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+FCC0 .|    |    |    |    no user found [Client.php:1635]
+FCC0 .|    |    |    <= false
+FCC0 .|    |    |    no ticket found [Client.php:1494]
+FCC0 .|    |    <= false
+FCC0 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+FCC0 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+FCC0 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+FCC0 .|    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+FCC0 .|    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+FCC0 .|    |    |    <= 'https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+FCC0 .|    |    |    Redirect to : https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php [Client.php:1663]
+FCC0 .|    |    |    exit()
+FCC0 .|    |    |    -
+FCC0 .|    |    -
+FCC0 .|    -
+7F86 .START (2018-04-26 17:12:08) phpCAS-1.3.5+ ****************** [CAS.php:468]
+7F86 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+7F86 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+7F86 .|    |    Starting a new session ST-2564-WBmmiTbSAlfSVgQKgV60-casinsa-toulousefr [Client.php:932]
+7F86 .|    |    Session is not authenticated [Client.php:938]
+7F86 .|    |    Ticket 'ST-28-VeJaZvXHybncRaej7PKY-cas.insa-toulouse.fr' found [Client.php:1020]
+7F86 .|    <= ''
+7F86 .<= ''
+7F86 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+7F86 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+7F86 .<= ''
+7F86 .=> phpCAS::forceAuthentication() [CAS.php:27]
+7F86 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+7F86 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+7F86 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+7F86 .|    |    |    |    no user found [Client.php:1635]
+7F86 .|    |    |    <= false
+7F86 .|    |    |    CAS 2.0 ticket `ST-28-VeJaZvXHybncRaej7PKY-cas.insa-toulouse.fr' is present [Client.php:1447]
+7F86 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+7F86 .|    |    |    |     [Client.php:3169]
+7F86 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+7F86 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+7F86 .|    |    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+7F86 .|    |    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+7F86 .|    |    |    |    <= 'https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+7F86 .|    |    |    |    => CAS_Client::_readURL('https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php&ticket=ST-28-VeJaZvXHybncRaej7PKY-cas.insa-toulouse.fr', NULL, NULL, NULL) [Client.php:3191]
+7F86 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+7F86 .|    |    |    |    |    |    Response Body: 
+7F86 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+7F86 .|    |    |    |    |    |    	<cas:authenticationSuccess>
+7F86 .|    |    |    |    |    |    		<cas:user>mega</cas:user>
+7F86 .|    |    |    |    |    |    
+7F86 .|    |    |    |    |    |    
+7F86 .|    |    |    |    |    |    	</cas:authenticationSuccess>
+7F86 .|    |    |    |    |    |    </cas:serviceResponse>
+7F86 .|    |    |    |    |    |     [CurlRequest.php:84]
+7F86 .|    |    |    |    |    <= true
+7F86 .|    |    |    |    <= true
+7F86 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+7F86 .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+7F86 .|    |    |    |    <= ''
+7F86 .|    |    |    |    Storing Proxy List [Client.php:3270]
+7F86 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+7F86 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+7F86 .|    |    |    |    <= true
+7F86 .|    |    |    |    => CAS_Client::_renameSession('ST-28-VeJaZvXHybncRaej7PKY-cas.insa-toulouse.fr') [Client.php:3293]
+7F86 .|    |    |    |    |    Killing session: ST-2564-WBmmiTbSAlfSVgQKgV60-casinsa-toulousefr [Client.php:3682]
+7F86 .|    |    |    |    |    Starting session: ST-28-VeJaZvXHybncRaej7PKY-casinsa-toulousefr [Client.php:3686]
+7F86 .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+7F86 .|    |    |    |    <= ''
+7F86 .|    |    |    <= true
+7F86 .|    |    |    CAS 2.0 ticket `ST-28-VeJaZvXHybncRaej7PKY-cas.insa-toulouse.fr' was validated [Client.php:1453]
+7F86 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+7F86 .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+7F86 .|    |    |    Prepare redirect to : http://localhost/projet_tutore/connect/test.php [Client.php:1518]
+7F86 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+7F86 .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+7F86 .|    |    |    exit()
+7F86 .|    |    |    -
+7F86 .|    |    -
+7F86 .|    -
+32CF .START (2018-04-26 17:12:08) phpCAS-1.3.5+ ****************** [CAS.php:468]
+32CF .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+32CF .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+32CF .|    |    Starting a new session ST-28-VeJaZvXHybncRaej7PKY-casinsa-toulousefr [Client.php:932]
+32CF .|    |    Session is authenticated as: mega [Client.php:936]
+32CF .|    <= ''
+32CF .<= ''
+32CF .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+32CF .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+32CF .<= ''
+32CF .=> phpCAS::forceAuthentication() [CAS.php:27]
+32CF .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+32CF .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+32CF .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+32CF .|    |    |    |    user = `mega' [Client.php:1622]
+32CF .|    |    |    <= true
+32CF .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+32CF .|    |    <= true
+32CF .|    |    no need to authenticate [Client.php:1282]
+32CF .|    <= true
+32CF .<= ''
+BA00 .START (2018-04-26 17:21:36) phpCAS-1.3.5+ ****************** [CAS.php:468]
+BA00 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+BA00 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+BA00 .|    |    Starting a new session ST-28-VeJaZvXHybncRaej7PKY-casinsa-toulousefr [Client.php:932]
+BA00 .|    |    Session is authenticated as: mega [Client.php:936]
+BA00 .|    <= ''
+BA00 .<= ''
+BA00 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+BA00 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+BA00 .<= ''
+BA00 .=> phpCAS::forceAuthentication() [CAS.php:27]
+BA00 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+BA00 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+BA00 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+BA00 .|    |    |    |    user = `mega' [Client.php:1622]
+BA00 .|    |    |    <= true
+BA00 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+BA00 .|    |    <= true
+BA00 .|    |    no need to authenticate [Client.php:1282]
+BA00 .|    <= true
+BA00 .<= ''
+BA00 .=> phpCAS::logoutWithRedirectService('http://www.google.fr') [CAS.php:42]
+BA00 .|    => CAS_Client::logout(array (  'service' => 'http://www.google.fr',)) [CAS.php:1471]
+BA00 .|    |    Prepare redirect to : https://cas.insa-toulouse.fr/cas/logout?service=http%3A%2F%2Fwww.google.fr [Client.php:1696]
+BA00 .|    |    Destroying session : ST-28-VeJaZvXHybncRaej7PKY-casinsa-toulousefr [Client.php:1698]
+BA00 .|    |    Session terminated [Client.php:1702]
+BA00 .|    |    exit()
+BA00 .|    |    -
+BA00 .|    -
+D742 .START (2018-04-26 17:22:14) phpCAS-1.3.5+ ****************** [CAS.php:468]
+D742 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+D742 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+D742 .|    |    Starting a new session ST-28-VeJaZvXHybncRaej7PKY-casinsa-toulousefr [Client.php:932]
+D742 .|    |    Session is not authenticated [Client.php:938]
+D742 .|    <= ''
+D742 .<= ''
+D742 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+D742 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+D742 .<= ''
+D742 .=> phpCAS::forceAuthentication() [CAS.php:27]
+D742 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+D742 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+D742 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+D742 .|    |    |    |    no user found [Client.php:1635]
+D742 .|    |    |    <= false
+D742 .|    |    |    no ticket found [Client.php:1494]
+D742 .|    |    <= false
+D742 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+D742 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+D742 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+D742 .|    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+D742 .|    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+D742 .|    |    |    <= 'https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+D742 .|    |    |    Redirect to : https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php [Client.php:1663]
+D742 .|    |    |    exit()
+D742 .|    |    |    -
+D742 .|    |    -
+D742 .|    -
+7DE1 .START (2018-04-26 17:22:17) phpCAS-1.3.5+ ****************** [CAS.php:468]
+7DE1 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+7DE1 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+7DE1 .|    |    Starting a new session ST-28-VeJaZvXHybncRaej7PKY-casinsa-toulousefr [Client.php:932]
+7DE1 .|    |    Session is not authenticated [Client.php:938]
+7DE1 .|    |    Ticket 'ST-81-GnVpqq4dh00fcL93KGBk-cas.insa-toulouse.fr' found [Client.php:1020]
+7DE1 .|    <= ''
+7DE1 .<= ''
+7DE1 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+7DE1 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+7DE1 .<= ''
+7DE1 .=> phpCAS::forceAuthentication() [CAS.php:27]
+7DE1 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+7DE1 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+7DE1 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+7DE1 .|    |    |    |    no user found [Client.php:1635]
+7DE1 .|    |    |    <= false
+7DE1 .|    |    |    CAS 2.0 ticket `ST-81-GnVpqq4dh00fcL93KGBk-cas.insa-toulouse.fr' is present [Client.php:1447]
+7DE1 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+7DE1 .|    |    |    |     [Client.php:3169]
+7DE1 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+7DE1 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+7DE1 .|    |    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+7DE1 .|    |    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+7DE1 .|    |    |    |    <= 'https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+7DE1 .|    |    |    |    => CAS_Client::_readURL('https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php&ticket=ST-81-GnVpqq4dh00fcL93KGBk-cas.insa-toulouse.fr', NULL, NULL, NULL) [Client.php:3191]
+7DE1 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+7DE1 .|    |    |    |    |    |    Response Body: 
+7DE1 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+7DE1 .|    |    |    |    |    |    	<cas:authenticationSuccess>
+7DE1 .|    |    |    |    |    |    		<cas:user>mega</cas:user>
+7DE1 .|    |    |    |    |    |    
+7DE1 .|    |    |    |    |    |    
+7DE1 .|    |    |    |    |    |    	</cas:authenticationSuccess>
+7DE1 .|    |    |    |    |    |    </cas:serviceResponse>
+7DE1 .|    |    |    |    |    |     [CurlRequest.php:84]
+7DE1 .|    |    |    |    |    <= true
+7DE1 .|    |    |    |    <= true
+7DE1 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+7DE1 .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+7DE1 .|    |    |    |    <= ''
+7DE1 .|    |    |    |    Storing Proxy List [Client.php:3270]
+7DE1 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+7DE1 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+7DE1 .|    |    |    |    <= true
+7DE1 .|    |    |    |    => CAS_Client::_renameSession('ST-81-GnVpqq4dh00fcL93KGBk-cas.insa-toulouse.fr') [Client.php:3293]
+7DE1 .|    |    |    |    |    Killing session: ST-28-VeJaZvXHybncRaej7PKY-casinsa-toulousefr [Client.php:3682]
+7DE1 .|    |    |    |    |    Starting session: ST-81-GnVpqq4dh00fcL93KGBk-casinsa-toulousefr [Client.php:3686]
+7DE1 .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+7DE1 .|    |    |    |    <= ''
+7DE1 .|    |    |    <= true
+7DE1 .|    |    |    CAS 2.0 ticket `ST-81-GnVpqq4dh00fcL93KGBk-cas.insa-toulouse.fr' was validated [Client.php:1453]
+7DE1 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+7DE1 .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+7DE1 .|    |    |    Prepare redirect to : http://localhost/projet_tutore/connect/test.php [Client.php:1518]
+7DE1 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+7DE1 .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+7DE1 .|    |    |    exit()
+7DE1 .|    |    |    -
+7DE1 .|    |    -
+7DE1 .|    -
+AA61 .START (2018-04-26 17:22:17) phpCAS-1.3.5+ ****************** [CAS.php:468]
+AA61 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+AA61 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+AA61 .|    |    Starting a new session ST-81-GnVpqq4dh00fcL93KGBk-casinsa-toulousefr [Client.php:932]
+AA61 .|    |    Session is authenticated as: mega [Client.php:936]
+AA61 .|    <= ''
+AA61 .<= ''
+AA61 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+AA61 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+AA61 .<= ''
+AA61 .=> phpCAS::forceAuthentication() [CAS.php:27]
+AA61 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+AA61 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+AA61 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+AA61 .|    |    |    |    user = `mega' [Client.php:1622]
+AA61 .|    |    |    <= true
+AA61 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+AA61 .|    |    <= true
+AA61 .|    |    no need to authenticate [Client.php:1282]
+AA61 .|    <= true
+AA61 .<= ''
+D7B8 .START (2018-04-26 17:22:31) phpCAS-1.3.5+ ****************** [CAS.php:468]
+D7B8 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+D7B8 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+D7B8 .|    |    Starting a new session ST-81-GnVpqq4dh00fcL93KGBk-casinsa-toulousefr [Client.php:932]
+D7B8 .|    |    Session is authenticated as: mega [Client.php:936]
+D7B8 .|    <= ''
+D7B8 .<= ''
+D7B8 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+D7B8 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+D7B8 .<= ''
+D7B8 .=> phpCAS::forceAuthentication() [CAS.php:27]
+D7B8 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+D7B8 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+D7B8 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+D7B8 .|    |    |    |    user = `mega' [Client.php:1622]
+D7B8 .|    |    |    <= true
+D7B8 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+D7B8 .|    |    <= true
+D7B8 .|    |    no need to authenticate [Client.php:1282]
+D7B8 .|    <= true
+D7B8 .<= ''
+9962 .START (2018-04-26 17:26:06) phpCAS-1.3.5+ ****************** [CAS.php:468]
+9962 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+9962 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+9962 .|    |    Starting a new session ST-81-GnVpqq4dh00fcL93KGBk-casinsa-toulousefr [Client.php:932]
+9962 .|    |    Session is authenticated as: mega [Client.php:936]
+9962 .|    <= ''
+9962 .<= ''
+9962 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+9962 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+9962 .<= ''
+9962 .=> phpCAS::forceAuthentication() [CAS.php:27]
+9962 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+9962 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+9962 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+9962 .|    |    |    |    user = `mega' [Client.php:1622]
+9962 .|    |    |    <= true
+9962 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+9962 .|    |    <= true
+9962 .|    |    no need to authenticate [Client.php:1282]
+9962 .|    <= true
+9962 .<= ''
+278C .START (2018-04-26 17:26:30) phpCAS-1.3.5+ ****************** [CAS.php:468]
+278C .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+278C .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+278C .|    |    Starting a new session ST-81-GnVpqq4dh00fcL93KGBk-casinsa-toulousefr [Client.php:932]
+278C .|    |    Session is authenticated as: mega [Client.php:936]
+278C .|    <= ''
+278C .<= ''
+278C .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+278C .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+278C .<= ''
+278C .=> phpCAS::forceAuthentication() [CAS.php:27]
+278C .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+278C .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+278C .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+278C .|    |    |    |    user = `mega' [Client.php:1622]
+278C .|    |    |    <= true
+278C .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+278C .|    |    <= true
+278C .|    |    no need to authenticate [Client.php:1282]
+278C .|    <= true
+278C .<= ''
+383C .START (2018-04-26 17:26:35) phpCAS-1.3.5+ ****************** [CAS.php:468]
+383C .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+383C .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+383C .|    |    Starting a new session ST-81-GnVpqq4dh00fcL93KGBk-casinsa-toulousefr [Client.php:932]
+383C .|    |    Session is authenticated as: mega [Client.php:936]
+383C .|    <= ''
+383C .<= ''
+383C .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+383C .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+383C .<= ''
+383C .=> phpCAS::forceAuthentication() [CAS.php:27]
+383C .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+383C .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+383C .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+383C .|    |    |    |    user = `mega' [Client.php:1622]
+383C .|    |    |    <= true
+383C .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+383C .|    |    <= true
+383C .|    |    no need to authenticate [Client.php:1282]
+383C .|    <= true
+383C .<= ''
+150E .START (2018-04-26 17:27:34) phpCAS-1.3.5+ ****************** [CAS.php:468]
+150E .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+150E .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+150E .|    |    Starting a new session ST-81-GnVpqq4dh00fcL93KGBk-casinsa-toulousefr [Client.php:932]
+150E .|    |    Session is authenticated as: mega [Client.php:936]
+150E .|    <= ''
+150E .<= ''
+150E .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+150E .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+150E .<= ''
+150E .=> phpCAS::forceAuthentication() [CAS.php:27]
+150E .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+150E .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+150E .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+150E .|    |    |    |    user = `mega' [Client.php:1622]
+150E .|    |    |    <= true
+150E .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+150E .|    |    <= true
+150E .|    |    no need to authenticate [Client.php:1282]
+150E .|    <= true
+150E .<= ''
+FDC8 .START (2018-04-26 17:27:49) phpCAS-1.3.5+ ****************** [CAS.php:468]
+FDC8 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+FDC8 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+FDC8 .|    |    Starting a new session ST-81-GnVpqq4dh00fcL93KGBk-casinsa-toulousefr [Client.php:932]
+FDC8 .|    |    Session is authenticated as: mega [Client.php:936]
+FDC8 .|    <= ''
+FDC8 .<= ''
+FDC8 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+FDC8 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+FDC8 .<= ''
+FDC8 .=> phpCAS::forceAuthentication() [CAS.php:27]
+FDC8 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+FDC8 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+FDC8 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+FDC8 .|    |    |    |    user = `mega' [Client.php:1622]
+FDC8 .|    |    |    <= true
+FDC8 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+FDC8 .|    |    <= true
+FDC8 .|    |    no need to authenticate [Client.php:1282]
+FDC8 .|    <= true
+FDC8 .<= ''
+E0F8 .START (2018-04-26 17:28:26) phpCAS-1.3.5+ ****************** [CAS.php:468]
+E0F8 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+E0F8 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+E0F8 .|    |    Starting a new session ST-81-GnVpqq4dh00fcL93KGBk-casinsa-toulousefr [Client.php:932]
+E0F8 .|    |    Session is authenticated as: mega [Client.php:936]
+E0F8 .|    <= ''
+E0F8 .<= ''
+E0F8 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+E0F8 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+E0F8 .<= ''
+E0F8 .=> phpCAS::forceAuthentication() [CAS.php:27]
+E0F8 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+E0F8 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+E0F8 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+E0F8 .|    |    |    |    user = `mega' [Client.php:1622]
+E0F8 .|    |    |    <= true
+E0F8 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+E0F8 .|    |    <= true
+E0F8 .|    |    no need to authenticate [Client.php:1282]
+E0F8 .|    <= true
+E0F8 .<= ''
+4301 .START (2018-04-26 17:30:48) phpCAS-1.3.5+ ****************** [CAS.php:468]
+4301 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+4301 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+4301 .|    |    Starting a new session ST-81-GnVpqq4dh00fcL93KGBk-casinsa-toulousefr [Client.php:932]
+4301 .|    |    Session is authenticated as: mega [Client.php:936]
+4301 .|    <= ''
+4301 .<= ''
+4301 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+4301 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+4301 .<= ''
+4301 .=> phpCAS::forceAuthentication() [CAS.php:27]
+4301 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+4301 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+4301 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+4301 .|    |    |    |    user = `mega' [Client.php:1622]
+4301 .|    |    |    <= true
+4301 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+4301 .|    |    <= true
+4301 .|    |    no need to authenticate [Client.php:1282]
+4301 .|    <= true
+4301 .<= ''
+4301 .=> phpCAS::logoutWithRedirectService('http://www.google.fr') [CAS.php:42]
+4301 .|    => CAS_Client::logout(array (  'service' => 'http://www.google.fr',)) [CAS.php:1471]
+4301 .|    |    Prepare redirect to : https://cas.insa-toulouse.fr/cas/logout?service=http%3A%2F%2Fwww.google.fr [Client.php:1696]
+4301 .|    |    Destroying session : ST-81-GnVpqq4dh00fcL93KGBk-casinsa-toulousefr [Client.php:1698]
+4301 .|    |    Session terminated [Client.php:1702]
+4301 .|    |    exit()
+4301 .|    |    -
+4301 .|    -
+B01C .START (2018-04-26 17:30:50) phpCAS-1.3.5+ ****************** [CAS.php:468]
+B01C .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+B01C .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+B01C .|    |    Starting a new session ST-81-GnVpqq4dh00fcL93KGBk-casinsa-toulousefr [Client.php:932]
+B01C .|    |    Session is not authenticated [Client.php:938]
+B01C .|    <= ''
+B01C .<= ''
+B01C .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+B01C .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+B01C .<= ''
+B01C .=> phpCAS::forceAuthentication() [CAS.php:27]
+B01C .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+B01C .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+B01C .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+B01C .|    |    |    |    no user found [Client.php:1635]
+B01C .|    |    |    <= false
+B01C .|    |    |    no ticket found [Client.php:1494]
+B01C .|    |    <= false
+B01C .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+B01C .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+B01C .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+B01C .|    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+B01C .|    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+B01C .|    |    |    <= 'https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+B01C .|    |    |    Redirect to : https://cas.insa-toulouse.fr/cas/login?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php [Client.php:1663]
+B01C .|    |    |    exit()
+B01C .|    |    |    -
+B01C .|    |    -
+B01C .|    -
+D35D .START (2018-04-26 17:30:57) phpCAS-1.3.5+ ****************** [CAS.php:468]
+D35D .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+D35D .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+D35D .|    |    Starting a new session ST-81-GnVpqq4dh00fcL93KGBk-casinsa-toulousefr [Client.php:932]
+D35D .|    |    Session is not authenticated [Client.php:938]
+D35D .|    |    Ticket 'ST-129-muX2LdZFCEQmcNsxnxDP-cas.insa-toulouse.fr' found [Client.php:1020]
+D35D .|    <= ''
+D35D .<= ''
+D35D .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+D35D .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+D35D .<= ''
+D35D .=> phpCAS::forceAuthentication() [CAS.php:27]
+D35D .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+D35D .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+D35D .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+D35D .|    |    |    |    no user found [Client.php:1635]
+D35D .|    |    |    <= false
+D35D .|    |    |    CAS 2.0 ticket `ST-129-muX2LdZFCEQmcNsxnxDP-cas.insa-toulouse.fr' is present [Client.php:1447]
+D35D .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1450]
+D35D .|    |    |    |     [Client.php:3169]
+D35D .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+D35D .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+D35D .|    |    |    |    |    |    Final URI: http://localhost/projet_tutore/connect/test.php [Client.php:3548]
+D35D .|    |    |    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+D35D .|    |    |    |    <= 'https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php'
+D35D .|    |    |    |    => CAS_Client::_readURL('https://cas.insa-toulouse.fr/cas/serviceValidate?service=http%3A%2F%2Flocalhost%2Fprojet_tutore%2Fconnect%2Ftest.php&ticket=ST-129-muX2LdZFCEQmcNsxnxDP-cas.insa-toulouse.fr', NULL, NULL, NULL) [Client.php:3191]
+D35D .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+D35D .|    |    |    |    |    |    Response Body: 
+D35D .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+D35D .|    |    |    |    |    |    	<cas:authenticationSuccess>
+D35D .|    |    |    |    |    |    		<cas:user>mega</cas:user>
+D35D .|    |    |    |    |    |    
+D35D .|    |    |    |    |    |    
+D35D .|    |    |    |    |    |    	</cas:authenticationSuccess>
+D35D .|    |    |    |    |    |    </cas:serviceResponse>
+D35D .|    |    |    |    |    |     [CurlRequest.php:84]
+D35D .|    |    |    |    |    <= true
+D35D .|    |    |    |    <= true
+D35D .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+D35D .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+D35D .|    |    |    |    <= ''
+D35D .|    |    |    |    Storing Proxy List [Client.php:3270]
+D35D .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+D35D .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+D35D .|    |    |    |    <= true
+D35D .|    |    |    |    => CAS_Client::_renameSession('ST-129-muX2LdZFCEQmcNsxnxDP-cas.insa-toulouse.fr') [Client.php:3293]
+D35D .|    |    |    |    |    Killing session: ST-81-GnVpqq4dh00fcL93KGBk-casinsa-toulousefr [Client.php:3682]
+D35D .|    |    |    |    |    Starting session: ST-129-muX2LdZFCEQmcNsxnxDP-casinsa-toulousefr [Client.php:3686]
+D35D .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+D35D .|    |    |    |    <= ''
+D35D .|    |    |    <= true
+D35D .|    |    |    CAS 2.0 ticket `ST-129-muX2LdZFCEQmcNsxnxDP-cas.insa-toulouse.fr' was validated [Client.php:1453]
+D35D .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+D35D .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+D35D .|    |    |    Prepare redirect to : http://localhost/projet_tutore/connect/test.php [Client.php:1518]
+D35D .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+D35D .|    |    |    <= 'http://localhost/projet_tutore/connect/test.php'
+D35D .|    |    |    exit()
+D35D .|    |    |    -
+D35D .|    |    -
+D35D .|    -
+9E25 .START (2018-04-26 17:30:58) phpCAS-1.3.5+ ****************** [CAS.php:468]
+9E25 .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+9E25 .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+9E25 .|    |    Starting a new session ST-129-muX2LdZFCEQmcNsxnxDP-casinsa-toulousefr [Client.php:932]
+9E25 .|    |    Session is authenticated as: mega [Client.php:936]
+9E25 .|    <= ''
+9E25 .<= ''
+9E25 .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+9E25 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+9E25 .<= ''
+9E25 .=> phpCAS::forceAuthentication() [CAS.php:27]
+9E25 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+9E25 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+9E25 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+9E25 .|    |    |    |    user = `mega' [Client.php:1622]
+9E25 .|    |    |    <= true
+9E25 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+9E25 .|    |    <= true
+9E25 .|    |    no need to authenticate [Client.php:1282]
+9E25 .|    <= true
+9E25 .<= ''
+B59E .START (2018-04-26 17:45:41) phpCAS-1.3.5+ ****************** [CAS.php:468]
+B59E .=> phpCAS::client('2.0', 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:16]
+B59E .|    => CAS_Client::__construct('2.0', false, 'cas.insa-toulouse.fr', 443, 'cas', true) [CAS.php:360]
+B59E .|    |    Starting a new session ST-129-muX2LdZFCEQmcNsxnxDP-casinsa-toulousefr [Client.php:932]
+B59E .|    |    Session is authenticated as: mega [Client.php:936]
+B59E .|    <= ''
+B59E .<= ''
+B59E .=> phpCAS::setNoCasServerValidation() [CAS.php:24]
+B59E .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+B59E .<= ''
+B59E .=> phpCAS::forceAuthentication() [CAS.php:27]
+B59E .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+B59E .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+B59E .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+B59E .|    |    |    |    user = `mega' [Client.php:1622]
+B59E .|    |    |    <= true
+B59E .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1417]
+B59E .|    |    <= true
+B59E .|    |    no need to authenticate [Client.php:1282]
+B59E .|    <= true
+B59E .<= ''
