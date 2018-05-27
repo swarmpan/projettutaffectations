@@ -3,3 +3,5 @@
 .idea/**/dictionaries
 .idea/**/shelf
 *.log
+*.dat
+vendor
