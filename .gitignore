@@ -2,4 +2,4 @@
 .idea/**/tasks.xml
 .idea/**/dictionaries
 .idea/**/shelf
-phpCAS.log
+*.log
