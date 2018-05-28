@@ -14,7 +14,7 @@
  */
 
 
-require_once 'CAS.php';
+require_once 'CAS/CAS.php';
 
 CAS::init();
 	
@@ -32,7 +32,7 @@ if(isset($_GET['logout'])) CAS::logout();
     
 <?php 
 
-	require_once("INSA_LDAP.php");
+	require_once("LDAP/INSA_LDAP.php");
 
 	$infos = INSA_Ldap_Class::INSA_LDAP_parse(INSA_Ldap_Class::INSA_LDAP_info());
 

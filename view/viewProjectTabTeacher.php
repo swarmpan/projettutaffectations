@@ -1,4 +1,4 @@
-<h2><?php echo $pagetitle; ?></h2>
+<?php $color = 0; ?>
 
 <form action="index.php?controller=project" method="post">
 
@@ -38,9 +38,12 @@
 		<tr bgcolor='<?php echo ($color%2 != 0) ? '#EEE' : ''; $color++; ?>' id="<?php echo $myproject->getIDProject(); ?>">
 			<td class="projet name"><?php echo $myproject->getName(); ?></td>
 			<td class="projet desc">
-				<!-- #ONSEARETEICI -->
-				<span><?php echo nl2br($myproject->getShortDescription()); ?><p style="text-align:center;margin:0px;margin-top:8px"><input type="submit" id="<?php echo $myproject->getIDProject();?>" value="Show"></p></span>
-				<span class="hidden"><?php echo nl2br($myproject->getDescription()); ?><p style="text-align:center;margin:0px;margin-top:8px"><input type="submit" id="<?php echo $myproject->getIDProject();?>" value="Hide"></p></span>
+			<?php if ($myproject->getShortDescription() == $myproject->getDescription()) { ?>
+				<span name="description"      class=""      ><?php echo nl2br($myproject->getDescription());      ?></span>
+			<?php } else { ?>
+				<span id="<?php echo $myproject->getIDProject();?>" name="shortDescription" class=""      ><?php echo nl2br($myproject->getShortDescription()); ?><p style="text-align:center;margin:0px;margin-top:8px"><input type="submit" value="Show"></p></span>
+				<span id="<?php echo $myproject->getIDProject();?>" name="longDescription"  class="hidden"><?php echo nl2br($myproject->getDescription());      ?><p style="text-align:center;margin:0px;margin-top:8px"><input type="submit" value="Hide"></p></span>
+			<?php } ?>
 			</td>
 			<td class="projet stud"><?php echo ($myproject->getNbMinStudent() != $myproject->getNbMaxStudent()) ? 'De <b>'.$myproject->getNbMinStudent().'</b> à <b>'.$myproject->getNbMaxStudent().'</b>' : '<b>'.$myproject->getNbMaxStudent().'</b>'; ?></td>
 			<td class="projet grp"><?php echo $myproject->getNbMaxGroup(); ?></td>
@@ -56,39 +59,4 @@
 <?php } ?>
 </form>
 
-<?php $color = 0; ?>
-
-<h3>Autres Projets Proposés</h3>
-
-<table style='width:100%; border:0px solid black;'>
-	<tr bgcolor='#CCC'>
-		<td class="projet name">Nom</td>
-		<td class="projet desc">Description</td>
-		<td class="projet stud">Nombre d'Eleves</td>
-		<td class="projet grp">Nombre Max Groupes</td>
-		<td class="projet act">Tuteur</td>
-	</tr>
-	
-<?php if (count($projects)==0) { ?>
-</table>
-<h3 style='text-align:center;'>Aucun projet à afficher</h3>
-<?php } else { ?>
-
-		
-	<?php foreach ($projects as $project) { ?>
-		
-		<tr bgcolor='<?php echo ($color%2 != 0) ? '#EEE' : ''; $color++; ?>' id="<?php echo $project->getIDProject(); ?>">
-			<td class="projet name"><?php echo $project->getName(); ?></td>
-			<td class="projet desc"><span><?php echo nl2br($project->getDescription()); ?></span></td>
-			<td class="projet stud"><?php echo ($project->getNbMinStudent() != $project->getNbMaxStudent()) ? 'De <b>'.$project->getNbMinStudent().'</b> à <b>'.$project->getNbMaxStudent().'</b>' : '<b>'.$project->getNbMaxStudent().'</b>'; ?></td>
-			<td class="projet grp"><?php echo $project->getNbMaxGroup(); ?></td>
-			<td class="projet act"><?php echo $project->getIDTutor(); ?></td>
-		</tr>
-		
-	<?php } ?>
-	
-</table>
-<?php } ?>
-
-<script type="text/javascript" src="script/projectDelete.js?v=<?=time();?>"></script>
 <script type="text/javascript" src="script/projectManagement.js?v=<?=time();?>"></script>

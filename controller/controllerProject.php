@@ -47,18 +47,16 @@ switch ($action) {
 		if ($_SESSION['account']['type']!='student'){
 			$myprojects = ModelProject::getProjectByTutor(CAS::getUser());
 			$projects = ModelProject::getProjectByNotTutor(CAS::getUser());
-			$color = 0;
 		
 			$pagetitle = "Liste des Projets";
-			$view = 'AllTeacher';
+			$view = 'UserTeacherModeTeacher';
 		}
 	
 		else{
 			$projects = ModelProject::getAllOrderByName();
-			$color = 0;
 		
 			$pagetitle = "Liste des Projets";
-			$view = 'AllStudent';
+			$view = 'UserStudentModeTeacher';
 		}
 	
 }

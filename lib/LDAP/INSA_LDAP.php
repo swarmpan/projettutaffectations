@@ -6,13 +6,12 @@ class INSA_Ldap_Class {
 
 	// Parametres de LDAP
 
-	static function INSA_LDAP_info() {
+	static function INSA_LDAP_info($uid) {
 		require_once("LDAP.php");
 
 		ini_set("display_errors", 1);
 
 		$ldap = new Ldap_class(ConfigLDAP::getServer(), ConfigLDAP::getPort(), ConfigLDAP::getBase());
-		$uid = phpCAS::getUser();
 		$data=$ldap->fetch("uid=".$uid,array("mail","givenName","sn","eduPersonAffiliation","supannCivilite"));    
 		return $data;
 	}

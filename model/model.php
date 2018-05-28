@@ -16,13 +16,7 @@ class Model {
 			self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		}
 		catch(PDOException $e) {
-  			if (Config::getDebug()) {
-			    echo $e->getMessage();
-			} 
-			else {
-			    echo 'Une erreur est survenue <a href=""> retour a la page d\'accueil </a>';
-			}
-			die();
+  			Model::theCatch($e->getMessage());
 		}	
 	}
 
@@ -35,13 +29,7 @@ class Model {
 			return $ans;
 		} 
 		catch(PDOException $e) {
-  			if (Config::getDebug()) {
-			    echo $e->getMessage();
-			} 
-			else {
-			    echo 'Une erreur est survenue <a href="index.php"> retour a la page d\'accueil </a>';
-			}
-			die();
+  			Model::theCatch($e->getMessage());
 		}	
 	}
 
@@ -54,13 +42,7 @@ class Model {
             return $ans;
         }
         catch(PDOException $e) {
-            if (Config::getDebug()) {
-                echo $e->getMessage();
-            }
-            else {
-                echo 'Une erreur est survenue <a href="index.php"> retour a la page d\'accueil </a>';
-            }
-            die();
+            Model::theCatch($e->getMessage());
         }
     }
 
@@ -73,13 +55,7 @@ class Model {
 		  	return $req_prep->fetch();
 		}
 		catch(PDOException $e) {
-  			if (Config::getDebug()) {
-			    echo $e->getMessage();
-			} 
-			else {
-			    echo 'Une erreur est survenue <a href="index.php"> retour a la page d\'accueil </a>';
-			}
-			die();
+  			Model::theCatch($e->getMessage());
 		}
 	}
 
@@ -90,13 +66,7 @@ class Model {
 			$req_prep->execute(array($arg));
 		}
 		catch(PDOException $e) {
-  			if (Config::getDebug()) {
-			    echo $e->getMessage();
-			} 
-			else {
-			    echo 'Une erreur est survenue <a href="index.php"> retour a la page d\'accueil </a>';
-			}
-			die();
+  			Model::theCatch($e->getMessage());
 		}
 	}
 	

@@ -24,8 +24,6 @@ if (isset($_SESSION['account']['type']) && $_SESSION['account']['type']!=NULL) s
 		
 	default:
 		
-		$login = CAS::getUser();
-		
 		$pagetitle = "Profil";
 		$view = 'Profil';
 	

@@ -18,7 +18,7 @@ class ModelProject extends Model {
 	function getIDTutor() 		{return $this->id_tutor;}
 	function getName() 			{return $this->name;}
 	function getDescription() 	{return $this->description;}
-	function getShortDescription(){return substr(explode(chr(13),$this->description)[0],0,100);}
+	function getShortDescription(){return substr(explode(chr(13),$this->description)[0],0,100)." [...]";}
 	function getNbMinStudent()	{return $this->nbMinStudent;}
 	function getNbMaxStudent()	{return $this->nbMaxStudent;}
 	function getNbMaxGroup()	{return $this->nbMaxGroup;}

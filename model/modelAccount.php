@@ -1,6 +1,7 @@
 <?php
+
 require_once "model.php";
-require_once "Security.php";
+require_once "security.php";
 
 class ModelAccount extends Model {
 	

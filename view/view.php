@@ -43,25 +43,24 @@
 						<br>
 							<a class="button" href="index.php?action=accueil">Accueil</a>
 							
-						<?php if (isset($_SESSION['account']['qqchose']) && $_SESSION['account']['qqchose']!=NULL) { ?>
+						<?php if (isset($_SESSION['account']['type']) && $_SESSION['account']['type']!=NULL) { ?>
 						
 							<a class="button" href="index.php?action=profil">Mon Profil</a>
 							<a class="button" href="index.php?controller=project">Liste des Projets</a>
 							<a class="button" href="index.php?logout=">Se déconnecter</a>
-							
-							<?php if ($_SESSION['account']['type']!='teacher') { ?>
-								<a class="button_admin" href="index.php?switch=teacher">Passer en mode Enseignant</a>
+							<?php if ($_SESSION['account']['login'] == "mega") { ?>
+								<?php if ($_SESSION['account']['type']!='teacher') { ?>
+									<a class="button_admin" href="index.php?switch=teacher">Passer en mode Enseignant</a>
+								<?php } ?>
+								<?php if ($_SESSION['account']['type']!='student') { ?>
+									<a class="button_admin" href="index.php?switch=student">Passer en mode Etudiant</a>
+								<?php } ?>
 							<?php } ?>
-							<?php if ($_SESSION['account']['type']!='student') { ?>
-								<a class="button_admin" href="index.php?switch=student">Passer en mode Etudiant</a>
-							<?php } ?>
 							
-							
-						<?php } ?>
-						
-						<?php if (!isset($_SESSION['account']['qqchose']) || $_SESSION['account']['qqchose']==NULL) { ?>
+						<?php } else { ?>
 						
 							<a class="button" href="index.php?login=">Se connecter</a>
+							
 						<?php } ?>	
 						
 						<br>
