@@ -1,0 +1,12 @@
+option solver cplex ;
+
+reset ;
+model projet.mod ;
+data projet.dat ;
+solve ;
+
+# Ajouter ici l'affichage de votre programme...
+
+display Total_Cost ;
+display Affect;
+display StudentInProject;
