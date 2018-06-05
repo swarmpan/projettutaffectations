@@ -57,7 +57,7 @@ class ProjetRanking extends Projet
 		{
 			//$demandeRanking = 0;
  			$demande = Model::$pdo->prepare('SELECT COUNT(*) as nbPerRank FROM project_ranking WHERE id_project = ? and ranking = ?');
- 			$demande->execute(array($idProject, 1));
+ 			$demande->execute(array($idProject, $ranking));
  			$demandeRanking = $demande->Fetch();
  			$this->demandePerRanking[$ranking] = $demandeRanking['nbPerRank'];
  			/*$demandeRanking=$bdd->query(SELECT * FROM project_ranking WHERE id_project=idProject and ranking=1); 
