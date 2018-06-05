@@ -112,7 +112,7 @@ class SelectProjet
 					$g->affecterVoeu($etudiant, $project, 1);
 				}
     		}
-            elseif ($min <= $nbDemande1) {
+            elseif ($min <= $nbDemande1 && $this->capacite < $this->nbEtudiants) {
                 $this->projects[] = $project;
                 $this->capacite += $nbDemande1;
             }
